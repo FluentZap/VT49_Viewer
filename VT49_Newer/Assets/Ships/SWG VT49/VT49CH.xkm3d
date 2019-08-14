@@ -1,0 +1,15 @@
+!Model
+Id: b7bfab09-0e80-4b08-9710-6fb63593b8b8
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../../../Desktop/VT49CH.obj
+Skeleton: 360f8401-88d4-4028-bbeb-0be8fb962d8a:Ships/SWG VT49/VT49CH Skeleton
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    e6bbf906dddd6f4ad31f148f34609bf0:
+        Name: DefaultMaterial
+        MaterialInstance:
+            Material: ab380e79-b55d-4819-8fc7-6476d067a0ef:Ships/SWG VT49/DefaultMaterial
+Modifiers: {}
+~SourceHashes:
+    de5e0d8fc41a98058534452f0c59b235~../../../../../../../Desktop/VT49CH.obj: 80f6fb70e816813ed8379e477f844363

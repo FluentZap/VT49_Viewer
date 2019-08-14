@@ -1,0 +1,165 @@
+!UIPageAsset
+Id: a7a9976e-be01-44ce-aaf8-526d84034bb6
+SerializedVersion: {Xenko: 2.1.0.1}
+Tags: []
+Design:
+    Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+Hierarchy:
+    RootParts:
+        - !Grid ref!! 36f85665-4658-4593-9b6b-0c9c7b0c8aa7
+    Parts:
+        -   UIElement: !EditText
+                Id: 03d9770b-cb6d-4c51-a6ec-4e5c588279f4
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 5
+                CanBeHitByUser: true
+                Width: 250.0
+                Height: 39.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Top
+                Margin: {Top: 21.0, Right: 30.0}
+                Name: IPBox
+                Padding: {Left: 8.0, Top: 4.0, Right: 8.0, Bottom: 8.0}
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:XenkoDefaultFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                ActiveImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:XenkoUIDesigns
+                    CurrentFrame: 3
+                InactiveImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:XenkoUIDesigns
+                    CurrentFrame: 4
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:XenkoUIDesigns
+                    CurrentFrame: 5
+                CaretColor: {R: 240, G: 240, B: 240, A: 255}
+                CaretWidth: 1.0
+                SelectionColor: {R: 240, G: 240, B: 240, A: 255}
+                IMESelectionColor: {R: 240, G: 255, B: 240, A: 255}
+                CaretFrequency: 1.0
+                Text: 127.0.0.1
+        -   UIElement: !Button
+                Id: 08f5fcd2-4578-40bc-8a75-0f78e6c34039
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                CanBeHitByUser: true
+                Width: 250.0
+                Height: 31.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Top
+                Margin: {Top: 141.0, Right: 30.0}
+                MaximumWidth: 3.40282347E+38
+                MaximumHeight: 3.40282347E+38
+                MaximumDepth: 3.40282347E+38
+                Name: CameraInsideFront
+                Padding: {Left: 10.0, Top: 5.0, Right: 10.0, Bottom: 7.0}
+                Content: !TextBlock ref!! f2646dd2-95e9-4b18-b28b-d47d4e54aee4
+                PressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:XenkoUIDesigns
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:XenkoUIDesigns
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:XenkoUIDesigns
+        -   UIElement: !Grid
+                Id: 36f85665-4658-4593-9b6b-0c9c7b0c8aa7
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                Children:
+                    971c0606d6332c36f6ed69ccfb57f1e7: !EditText ref!! 03d9770b-cb6d-4c51-a6ec-4e5c588279f4
+                    533dd4a3f8dce9aea223bc4f9443f36b: !Button ref!! ff675c49-e6fd-4e37-8790-62315bd810dc
+                    e2fa677349381f7abb54c04d7fdeb732: !Button ref!! 08f5fcd2-4578-40bc-8a75-0f78e6c34039
+                    9849c62ae867d87f1cc811ba4757a3b8: !Button ref!! 3ac05c5c-21c2-427a-be98-4355bb0d2ec2
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Button
+                Id: 3ac05c5c-21c2-427a-be98-4355bb0d2ec2
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                CanBeHitByUser: true
+                Width: 250.0
+                Height: 31.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Top
+                Margin: {Top: 172.0, Right: 30.0}
+                MaximumWidth: 3.40282347E+38
+                MaximumHeight: 3.40282347E+38
+                MaximumDepth: 3.40282347E+38
+                Name: CameraOutsideFront
+                Padding: {Left: 10.0, Top: 5.0, Right: 10.0, Bottom: 7.0}
+                Content: !TextBlock ref!! 8d8f84a8-2028-441d-a062-e447b46b1f73
+                PressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:XenkoUIDesigns
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:XenkoUIDesigns
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:XenkoUIDesigns
+        -   UIElement: !TextBlock
+                Id: 82cc8d96-3d73-448d-8eec-be894926fe68
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Center
+                VerticalAlignment: Center
+                Margin: {}
+                Text: Connect
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:XenkoDefaultFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+        -   UIElement: !TextBlock
+                Id: 8d8f84a8-2028-441d-a062-e447b46b1f73
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Center
+                VerticalAlignment: Center
+                Margin: {}
+                Text: Outside Front
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:XenkoDefaultFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+        -   UIElement: !TextBlock
+                Id: f2646dd2-95e9-4b18-b28b-d47d4e54aee4
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Center
+                VerticalAlignment: Center
+                Margin: {}
+                MaximumWidth: 3.40282347E+38
+                MaximumHeight: 3.40282347E+38
+                MaximumDepth: 3.40282347E+38
+                Text: Inside Front
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:XenkoDefaultFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+        -   UIElement: !Button
+                Id: ff675c49-e6fd-4e37-8790-62315bd810dc
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                CanBeHitByUser: true
+                Width: 250.0
+                Height: 38.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Top
+                Margin: {Top: 77.0, Right: 30.0}
+                MaximumWidth: 3.40282347E+38
+                MaximumHeight: 3.40282347E+38
+                MaximumDepth: 3.40282347E+38
+                Name: ConnectButton
+                Padding: {Left: 10.0, Top: 5.0, Right: 10.0, Bottom: 7.0}
+                Content: !TextBlock ref!! 82cc8d96-3d73-448d-8eec-be894926fe68
+                PressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:XenkoUIDesigns
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:XenkoUIDesigns
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:XenkoUIDesigns

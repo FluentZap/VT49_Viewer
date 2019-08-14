@@ -1,0 +1,766 @@
+!SceneAsset
+Id: ed88d2ff-d469-4065-bcbf-74f2881213d1
+SerializedVersion: {Xenko: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! cef9286d-fb66-4d72-8756-af47c6d3e8fc
+        - ref!! 2d62e2e4-d094-4996-9b41-7c0a1338193e
+        - ref!! 89446736-e1a9-46f1-a36c-8e71437c637c
+        - ref!! 1e075557-8589-423e-a349-f13e63468cc6
+        - ref!! 27b60f0a-f92d-4244-842a-ee00ca51f1b3
+        - ref!! 747180be-ff4c-458f-a791-24fd0639de09
+        - ref!! 1cc8a0c9-60d4-470c-9f6e-4f40e8e89f14
+        - ref!! 5c11f0b5-8d4b-46ab-b40f-69d41b9aef0a
+        - ref!! a0f5ba57-7bb4-495e-bd85-9b802711dfce
+        - ref!! 20a22618-c24e-4f58-aa57-832b0765b3cf
+        - ref!! 2a9e5f3b-7265-4dd3-9fdd-707c50a0ba6d
+        - ref!! e8aff0cf-585b-4a49-a5df-a94e31454259
+        - ref!! 21c56a66-1fe1-4b23-8be4-ab55cdc37a6a
+        - ref!! 825adf70-a5ea-4fe9-a869-d21d0568c504
+        - ref!! 8bd62889-64bd-40a3-b2f1-48376b3d8170
+        - ref!! ee45de47-b969-4abc-baa9-9f907dfaf519
+        - ref!! 7c9a94f9-cc6a-4b76-807d-0614efd5836c
+        - ref!! 37e283fe-0e90-4aa9-87b5-8b985859937e
+        - ref!! cbfd7d6d-038b-4244-833f-6fc7e098d2f9
+        - ref!! 03b7e5c7-df3e-4454-bfce-1790c4186cd9
+        - ref!! ba9b2c6e-87e1-4824-acf5-00e9f821188a
+        - ref!! a72dc12a-6f93-4dfc-9c86-6ece91281c7c
+        - ref!! d5866618-2c1b-405e-a271-3594aa7b549e
+        - ref!! 24948cf5-6f87-48ae-84e2-4887e48d05db
+        - ref!! 87b44bde-1cbf-4905-8662-3a9c10baf5c1
+        - ref!! f0b9e088-0981-4355-abb5-1bcf23d49f8f
+        - ref!! bed6da5d-94bf-4433-831a-c8aa7a4d100e
+        - ref!! 58ae0d31-c796-4ced-a666-6a0e8b43302f
+        - ref!! 75ff87db-50c0-492c-8cd2-6468b40916b7
+        - ref!! fd97658d-2a44-4a59-aca3-0dd2f103d29e
+        - ref!! f8298ada-b232-4db8-a4ff-86cafa77a0a3
+        - ref!! 8890e7e6-d08f-4130-bdee-9317a8d3adef
+        - ref!! aa2ecb68-55df-4027-938e-b9e105a413d4
+        - ref!! a6fa00ea-8640-4241-b42f-80c072c16a6a
+        - ref!! 9dbb0fcf-f2c1-4818-829a-a9e07fecb7a7
+        - ref!! 6e4fc482-cf2a-4128-b74c-a62183c1d694
+        - ref!! a413618c-29b8-4c33-9057-3cf820f95806
+        - ref!! 4d1d7f79-71f4-45cf-9747-67be4fee3b03
+        - ref!! 02aeee66-3a5e-4564-a11e-cc0d6a4eeced
+        - ref!! 477c5293-654b-48ac-a603-263a61b875d2
+        - ref!! 2d4d1bd4-9cbb-46f7-add8-fb84bb596e34
+    Parts:
+        -   Folder: Fighters2
+            Entity:
+                Id: 02aeee66-3a5e-4564-a11e-cc0d6a4eeced
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: a78518ed-db49-4a0a-913e-91b2ae17226e
+                        Position: {X: -53.97835, Y: 21.9758472, Z: 170.277924}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 192be1c6-c9a0-431b-9c3d-87452c5ddda2
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Folder: Fighters
+            Entity:
+                Id: 03b7e5c7-df3e-4454-bfce-1790c4186cd9
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: f0bbf5af-ddeb-4513-a581-f5287500128e
+                        Position: {X: -50.8008842, Y: 21.9758472, Z: 167.1027}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 3b2fb1f3-8f1f-42d7-abd2-635abd8a0e6f
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Entity:
+                Id: 05ed8179-dbfe-4f3e-9982-ac6868ee6205
+                Name: VT-49 FrontOutside
+                Components:
+                    dec48846d190b1e08ef2f8f78d5927d4: !TransformComponent
+                        Id: b6b9de74-fa44-41c1-a4b1-4d026e4c5bd0
+                        Position: {X: 0.0, Y: 1.0, Z: 5.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7cf2d447bb790c6a776ba8a640bfef3e: !CameraComponent
+                        Id: 18f2a97a-47bf-4b74-b0b8-84657b7fca6c
+                        Name: FrontOutside
+                        Projection: Perspective
+                        VerticalFieldOfView: 60.0
+                        Slot: 3d803371-91dc-4734-b62a-f22f4eeac169
+        -   Entity:
+                Id: 0689006d-d3cf-4155-af78-8c7a99d6c959
+                Name: Point light
+                Components:
+                    ab26abd9237a93e48f431e3ddbfc08fa: !TransformComponent
+                        Id: 07d09764-5b21-45c1-8bf2-4c1e093da33d
+                        Position: {X: 1.37197276E-09, Y: 35.2769051, Z: -0.0156955719}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    eb97484da3fd53b9c3ba8e9194aa0c8e: !LightComponent
+                        Id: 4b6073ab-6ffc-4d6a-b0de-37a3a592cb37
+                        Enabled: false
+                        Type: !LightPoint
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Radius: 80.0
+                            Shadow:
+                                Size: Small
+                                BiasParameters: {}
+                        Intensity: 300.0
+        -   Folder: null
+            Entity:
+                Id: 1cc8a0c9-60d4-470c-9f6e-4f40e8e89f14
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: a4eb0c74-89b7-4d23-811d-89ba3982d746
+                        Position: {X: 0.0, Y: 2.11, Z: 10.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: ab174184-6b00-40e4-8d21-29993a9d7d34
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Entity:
+                Id: 1e075557-8589-423e-a349-f13e63468cc6
+                Name: UIBox
+                Components:
+                    f520a1ec74dc640e43441fa1f06f194b: !TransformComponent
+                        Id: 3d4a15da-ea2d-4beb-aeb4-f546be8fa76f
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e6bec3ebc3393d21e03379be98a4191c: !UIComponent
+                        Id: d2680217-71c8-4423-96d5-b4e478052465
+                        Page: a7a9976e-be01-44ce-aaf8-526d84034bb6:Page
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
+        -   Entity:
+                Id: 20a22618-c24e-4f58-aa57-832b0765b3cf
+                Name: XQ6 Platform
+                Components:
+                    9f2395fad3f1d66064ef7c3476a89b5a: !TransformComponent
+                        Id: 388e7d54-7e8b-4b68-b240-6c174d61654f
+                        Position: {X: 0.0, Y: 0.0, Z: 100.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            77232f0ee13948433f06d1e714edc706: ref!! 07d09764-5b21-45c1-8bf2-4c1e093da33d
+                    ce2d397285de289c4a9d650449396a49: !ModelComponent
+                        Id: 4da2d944-3878-4965-902a-b5f1b6086e78
+                        Model: 8b8b4bc0-7261-4d63-9cb5-b12964a56402:Ships/XQ6/XQ6 Platform
+                        Materials: {}
+        -   Entity:
+                Id: 21c56a66-1fe1-4b23-8be4-ab55cdc37a6a
+                Name: NetworkUpdate
+                Components:
+                    4815a02d751192b2bf8e28e19e9db94d: !TransformComponent
+                        Id: f97a2409-16fb-4d74-9b24-1784ea247183
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d9aab77f30c6ab06c7a5e6ed57e9edf4: !VT49_Newer.NetworkUpdate,VT49_Newer
+                        Id: 4728bcc2-b341-4d4f-b472-7a2ef70bb9d5
+                        ui: a7a9976e-be01-44ce-aaf8-526d84034bb6:Page
+                        Ship: ref!! a0f5ba57-7bb4-495e-bd85-9b802711dfce
+                        CameraInsideFront: ref!! b9a84f6c-1b32-4f14-b87c-895ed7a5f188
+                        CameraOutsideFront: ref!! 18f2a97a-47bf-4b74-b0b8-84657b7fca6c
+        -   Folder: Fighters
+            Entity:
+                Id: 24948cf5-6f87-48ae-84e2-4887e48d05db
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 1c250751-df8b-4ef0-b58a-f6570730f098
+                        Position: {X: -49.7616, Y: 21.9758472, Z: 165.906555}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 9526be0c-c589-4b3b-a2f5-234b17ae8024
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Entity:
+                Id: 27b60f0a-f92d-4244-842a-ee00ca51f1b3
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 1ac35e71-695b-400b-b36e-3870b34b450f
+                        Position: {X: 2.0, Y: 2.10968375, Z: 8.547943}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 998a502f-c1e5-448e-a253-8499b2330ef7
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Entity:
+                Id: 2a9e5f3b-7265-4dd3-9fdd-707c50a0ba6d
+                Name: ImperialIIStarDestroyer
+                Components:
+                    2c47f689af6c03a3d7f8194597c96bb3: !TransformComponent
+                        Id: d1fc2b2b-c32b-4343-8d40-0c32b234191f
+                        Position: {X: 3.14969778, Y: 61.716, Z: -100.0}
+                        Rotation: {X: 0.32011646, Y: 0.05933008, Z: -0.172307074, W: 0.9296858}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1c2006d15569adca73fcb3a5b60efd28: !ModelComponent
+                        Id: 851e369d-5da0-4f7d-8f80-81489466260f
+                        Enabled: false
+                        Model: 77e2cb00-ca7b-4e5d-8e54-f217f17100cd:Ships/Star Destroyer/ImperialIIStarDestroyer
+                        Materials:
+                            39a519a7cd438ba0fa807639f5f971bc~0: 027a73a2-123d-4fc6-bc8b-0bd47ccf6715:Ships/Star Destroyer/YellowLight
+                            0edcdf618a7e446c35667179b19b17c1~3: 739aa765-b676-46e5-9df8-57437607d293:Ships/XQ6/Dark
+                            d64c435658cda6d8d7d5ed9200f20b22~4: f9c58b32-c620-4db5-ae61-ce3882b230e8:Glass
+        -   Folder: Fighters2
+            Entity:
+                Id: 2d4d1bd4-9cbb-46f7-add8-fb84bb596e34
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: a35eeef6-7898-4896-b04f-9da43a894a9e
+                        Position: {X: -56.26105, Y: 21.9758472, Z: 170.277924}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: f040a5bf-d07e-4e03-8f3f-395a9775d9d6
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Entity:
+                Id: 2d62e2e4-d094-4996-9b41-7c0a1338193e
+                Name: Directional light
+                Components:
+                    bd20ddeeda4c98f06ff08f8093ee7489: !TransformComponent
+                        Id: ef5e4a88-1d9b-4c34-b5fe-810b0d19cd79
+                        Position: {X: 4.73548937, Y: 50.7288742, Z: -24.4746323}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.258819044, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    8b23148e7a2afe375c2bb4dbcf6c7f90: !LightComponent
+                        Id: 2c3d12f2-7d96-4594-bf47-d85cd1a82504
+                        Enabled: false
+                        Type: !LightPoint
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Radius: 300.0
+                            Shadow:
+                                Size: Small
+                                BiasParameters: {}
+                        Intensity: 7000.0
+        -   Folder: Fighters
+            Entity:
+                Id: 37e283fe-0e90-4aa9-87b5-8b985859937e
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 4c46a89d-1194-4505-a428-df61b1a2159c
+                        Position: {X: -49.7616, Y: 21.9758472, Z: 168.3015}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: acee1541-7aa4-4c67-8ac5-40bf0d966839
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Folder: Fighters2
+            Entity:
+                Id: 477c5293-654b-48ac-a603-263a61b875d2
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 15c7659d-1ede-4136-9d81-1b19ef8a2c10
+                        Position: {X: -55.0111961, Y: 21.9758472, Z: 171.476715}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 2b0d84ed-438f-4438-bba2-fbeae401ffc0
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Folder: Fighters2
+            Entity:
+                Id: 4d1d7f79-71f4-45cf-9747-67be4fee3b03
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 21b50fb9-358a-4051-820c-d72164a50b23
+                        Position: {X: -50.9730034, Y: 21.9758472, Z: 170.794083}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 895a949a-aa25-40a9-835c-06866b9682ec
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Folder: Fighters
+            Entity:
+                Id: 58ae0d31-c796-4ced-a666-6a0e8b43302f
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 0d8656b0-02d0-4903-be35-72a8d14f2e9a
+                        Position: {X: -55.0111961, Y: 21.9758472, Z: 165.3904}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 98164347-56fb-4a2f-a846-6f683cc66acf
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Entity:
+                Id: 5c11f0b5-8d4b-46ab-b40f-69d41b9aef0a
+                Name: Background Light
+                Components:
+                    f6e00dc679ecb2207dc5c446190d70a4: !TransformComponent
+                        Id: 9f39372b-e23b-4c27-9a6a-1c25a61d1b64
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    00d8974c2b3716ad20ff2ecdd5c2b846: !LightComponent
+                        Id: bb324938-fa15-45e9-aff6-d8d340c4954b
+                        Enabled: false
+                        Type: !LightAmbient
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.719000041, G: 0.719000041, B: 0.719000041}
+                        Intensity: 0.5
+        -   Folder: Fighters2
+            Entity:
+                Id: 6e4fc482-cf2a-4128-b74c-a62183c1d694
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 8637c079-cbf2-44d5-acde-26c716276fe0
+                        Position: {X: -49.7616, Y: 21.9758472, Z: 171.992874}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 185fd395-766f-4586-b650-b5264a3b06c2
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 747180be-ff4c-458f-a791-24fd0639de09
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 9adea65c-b3e3-483f-85d0-ff00dfe36ed6
+                        Position: {X: -2.0, Y: 2.10968375, Z: 8.547943}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: fe49fb7f-659e-4be6-be9a-c8cb6831e98a
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Folder: Fighters
+            Entity:
+                Id: 75ff87db-50c0-492c-8cd2-6468b40916b7
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 3ff36130-d366-4b9e-bb9d-fb65ca8adc49
+                        Position: {X: -56.26105, Y: 21.9758472, Z: 164.1916}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 495cfcc2-b8ee-40da-8d0f-487ece0065b8
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Entity:
+                Id: 7c9a94f9-cc6a-4b76-807d-0614efd5836c
+                Name: ImperialIIStarDestroyerSized
+                Components:
+                    5962b84694547109d943b59b1270b83f: !TransformComponent
+                        Id: ad4c1729-8a31-42ff-a3bc-dc50138bd8b5
+                        Position: {X: -45.6714172, Y: 28.6029358, Z: 183.088242}
+                        Rotation: {X: -0.0461810939, Y: -0.9974719, Z: -0.009620279, W: 0.0531448424}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    57364157573d6b4215cccdb0b54aa657: !ModelComponent
+                        Id: db089c5b-5f39-4028-aba3-9476ad5a1d24
+                        Model: f53f5419-3b63-46f7-b253-8c26e5cb4e0f:Ships/ISD2/ImperialIIStarDestroyerSized
+                        Materials:
+                            e8c2cc71e7116f3fcbca10d4e1469bae~0: a979e28d-8bfa-4563-897e-c047cb8f74c9:Ships/ISD2/YellowLight
+                            13fab0d8008e0486c6cb0b303ce59703~1: b954941a-9d4f-4a57-81cf-1d7946acf52e:Ships/ISD2/ScratchedMetal
+                            d635ef8fcf2ac885600e57659cc01165~2: 49fc81ef-9d28-4db4-892e-666a46690ad2:Ships/ISD2/ScratchedMetalDark
+                            d0c038f43a5a8c982b7b638600e7c83c~3: 451e6c33-3fc2-424b-a59f-633aba52b57c:Ships/ISD2/Dark
+        -   Entity:
+                Id: 825adf70-a5ea-4fe9-a869-d21d0568c504
+                Name: Point light
+                Components:
+                    7ec3311a2351786ccec63611e6399b4f: !TransformComponent
+                        Id: 11fba50b-2c58-4b03-92fa-a4d6fdce60db
+                        Position: {X: 0.196254969, Y: 8.40253448, Z: 7.093944}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    b5997187f6c596a0e7befecc8f4aad67: !LightComponent
+                        Id: 897a1ddb-6d04-4bc8-9cef-4d29710a107d
+                        Type: !LightPoint
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Radius: 50.0
+                            Shadow:
+                                Size: Small
+                                BiasParameters: {}
+                        Intensity: 50.0
+        -   Folder: Fighters
+            Entity:
+                Id: 87b44bde-1cbf-4905-8662-3a9c10baf5c1
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 7a1ec343-cd4b-4d00-9cc2-a7ff6da4af61
+                        Position: {X: -48.7885246, Y: 21.9758472, Z: 164.707764}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 523d6e29-2855-46d1-aa43-014ceb42b125
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Folder: Fighters2
+            Entity:
+                Id: 8890e7e6-d08f-4130-bdee-9317a8d3adef
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 67d5289c-fed4-48a8-ab2d-0850e8068e43
+                        Position: {X: -50.8008842, Y: 21.9758472, Z: 173.189026}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: be083407-76b1-4dcc-a476-d0432498a58c
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Entity:
+                Id: 89446736-e1a9-46f1-a36c-8e71437c637c
+                Name: Skybox
+                Components:
+                    00a80091883aed7c66cc3c5739f8445d: !TransformComponent
+                        Id: eb61788e-e60f-4ed7-a648-812eddf5af15
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    71aa564a094fec1badc02d74e97cb407: !BackgroundComponent
+                        Id: 4f8fa7f3-92e7-40a4-913d-2d480b4d71e4
+                        Texture: e6299f4c-4dd1-488c-9268-d5ba8afb724e:Skybox3
+                        Intensity: 0.4
+                    2558e764a80a656ade69826a5b690eee: !LightComponent
+                        Id: d3cab0a3-e1c2-4ebe-a6df-6b2d11d367be
+                        Type: !LightSkybox
+                            Skybox: 39265df4-d32a-418d-baa2-ba073d499ee1:BlueSky
+                        Intensity: 0.1
+        -   Entity:
+                Id: 8bd62889-64bd-40a3-b2f1-48376b3d8170
+                Name: Box
+                Components:
+                    c7ff8f4399a589adee94dafbfa5ffd76: !TransformComponent
+                        Id: 4263c133-a533-4838-9653-562c0f4dfff6
+                        Position: {X: 0.0, Y: 0.0, Z: 30.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    dbe50de8932f13b08293805631df7681: !ModelComponent
+                        Id: 044604fa-522f-4525-a59c-622bf1698c6f
+                        Model: d7a2ab71-4c00-42d6-b04a-6a72db105196:Ships/Box
+                        Materials: {}
+        -   Entity:
+                Id: 99dc6aaa-cb24-42e8-91e1-f861c5fb9f60
+                Name: VT-49 FrontInside
+                Components:
+                    dec48846d190b1e08ef2f8f78d5927d4: !TransformComponent
+                        Id: b464a934-e387-47f2-8897-7862c1887438
+                        Position: {X: -0.07041435, Y: 0.4663996, Z: -0.443379074}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7cf2d447bb790c6a776ba8a640bfef3e: !CameraComponent
+                        Id: b9a84f6c-1b32-4f14-b87c-895ed7a5f188
+                        Enabled: false
+                        Name: FrontInside
+                        Projection: Perspective
+                        Slot: 3d803371-91dc-4734-b62a-f22f4eeac169
+        -   Folder: Fighters2
+            Entity:
+                Id: 9dbb0fcf-f2c1-4818-829a-a9e07fecb7a7
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 00dcc0cc-e0b2-4f33-bdf1-feddd805d8db
+                        Position: {X: -56.4656677, Y: 21.9758472, Z: 173.189026}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 8a85782c-c186-409f-ba26-9c31b65e38a7
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Entity:
+                Id: a0f5ba57-7bb4-495e-bd85-9b802711dfce
+                Name: VT49_2
+                Components:
+                    8c1d8da1b41a0cd490b6fe32f4397ff0: !TransformComponent
+                        Id: d08bb58b-bdc1-40e4-ad1f-6bdfb16e4133
+                        Position: {X: 0.0, Y: -1.90734863E-06, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            4c11beb2ead1957b6bf75c92fa3bf2fc: ref!! b6b9de74-fa44-41c1-a4b1-4d026e4c5bd0
+                            1aaac47eb99fb89f4874bb5c368b7417: ref!! b464a934-e387-47f2-8897-7862c1887438
+                            1271130a350672d9da139f761279b0c5: ref!! 0913f901-b47a-4ebb-be8b-db29f0adab3d
+                            7f60c022d93ccea1d5fc42bb412a021b: ref!! 00f50411-b4b2-44d2-a461-54e5d04abafe
+                    f5b8ae62ff2bb605d3205c9921e6f73e: !ModelComponent
+                        Id: 7efb04dc-d4f9-4c96-9bc1-907accd63bf5
+                        Model: eae833f5-a115-4fa4-bef7-1b9b4e817a2c:Ships/SWG VT49/VT49_2
+                        Materials:
+                            9db6237676362395167d674560e45d8d~5: 9a4cb52e-5c64-4ba9-a99b-9d570fe6acd4:Ships/SWG VT49/01
+        -   Folder: Fighters2
+            Entity:
+                Id: a413618c-29b8-4c33-9057-3cf820f95806
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 6af94bc5-3eb7-4c3d-81e6-654abd3cdd16
+                        Position: {X: -48.7885246, Y: 21.9758472, Z: 170.794083}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: d3bb0362-81aa-4270-aaaf-326bbed8acd8
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Folder: Fighters2
+            Entity:
+                Id: a6fa00ea-8640-4241-b42f-80c072c16a6a
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: a5d76610-5872-43c0-9e5e-c82642211f51
+                        Position: {X: -55.28809, Y: 21.9758472, Z: 174.387817}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: f85aeb29-901a-455b-974f-eb48a8020389
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Folder: Fighters
+            Entity:
+                Id: a72dc12a-6f93-4dfc-9c86-6ece91281c7c
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: b3a2852a-bec1-4711-9872-a4a0e7be87c8
+                        Position: {X: -55.28809, Y: 21.9758472, Z: 168.3015}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 8e388539-0be0-49fc-8d35-fb7169297efb
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Folder: Fighters2
+            Entity:
+                Id: aa2ecb68-55df-4027-938e-b9e105a413d4
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 56ea4f98-2514-49aa-95fb-eb7cd76bfc21
+                        Position: {X: -54.2506371, Y: 21.9758472, Z: 173.189026}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: bcfe3fe1-c781-4cd5-bfbb-4f00e780c469
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Entity:
+                Id: b3b99122-9c32-4ca6-9f10-00fc194bde13
+                Name: Box
+                Components:
+                    c7ff8f4399a589adee94dafbfa5ffd76: !TransformComponent
+                        Id: 0913f901-b47a-4ebb-be8b-db29f0adab3d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    dbe50de8932f13b08293805631df7681: !ModelComponent
+                        Id: 84c002cf-ae83-48ed-92fe-38402a733aa8
+                        Enabled: false
+                        Model: d7a2ab71-4c00-42d6-b04a-6a72db105196:Ships/Box
+                        Materials: {}
+        -   Folder: Fighters
+            Entity:
+                Id: ba9b2c6e-87e1-4824-acf5-00e9f821188a
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: bdcb674d-67c9-439e-841d-61e9f4620009
+                        Position: {X: -54.2506371, Y: 21.9758472, Z: 167.1027}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: a70f8333-53d2-42c7-8bac-30e25f82d914
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Folder: Fighters
+            Entity:
+                Id: bed6da5d-94bf-4433-831a-c8aa7a4d100e
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 9b631bee-5c22-496e-8d9a-d9d402c5b56d
+                        Position: {X: -53.97835, Y: 21.9758472, Z: 164.1916}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: defe5184-2687-40ca-8e7d-279ade85e8cd
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Folder: Fighters
+            Entity:
+                Id: cbfd7d6d-038b-4244-833f-6fc7e098d2f9
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 74784959-293b-49b2-8019-f18d0dc91908
+                        Position: {X: 0.119915843, Y: 39.1646729, Z: 285.144623}
+                        Rotation: {X: 0.0, Y: 0.732830763, Z: 0.0, W: 0.680411}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: c1ed411c-5e96-43f2-8863-74f644605382
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Entity:
+                Id: cef9286d-fb66-4d72-8756-af47c6d3e8fc
+                Name: Camera
+                Components:
+                    b3f0d1b87d5c80057d5b33080db80bc6: !TransformComponent
+                        Id: 788d2bef-7da3-404b-885f-17e2ab61ca16
+                        Position: {X: 0.0, Y: 1.7, Z: -5.0}
+                        Rotation: {X: 0.0, Y: -1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e443af0322e7ceb5878eb97111edc8ce: !CameraComponent
+                        Id: 2aee1644-4f73-4a1b-aa59-cd7443b753dd
+                        Name: null
+                        Projection: Perspective
+                        Slot: 00000000-0000-0000-0000-000000000000
+        -   Folder: Fighters
+            Entity:
+                Id: d5866618-2c1b-405e-a271-3594aa7b549e
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 9f5b8fcd-79c0-4b8b-b432-3c9162b0d41d
+                        Position: {X: -56.4656677, Y: 21.9758472, Z: 167.1027}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 5a287b0f-34aa-41e0-9131-98f7cdb47101
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Entity:
+                Id: e6ff698f-95de-42e0-aab3-8e1b2db1a9bd
+                Name: VT49CH
+                Components:
+                    9ff8c4037d7f3d83de7534199ffe23c4: !TransformComponent
+                        Id: 00f50411-b4b2-44d2-a461-54e5d04abafe
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1e443bc79cce2d52f1a8ac14a1891930: !ModelComponent
+                        Id: 9550d50d-bb0d-4db0-b554-fbc4f5e3fad4
+                        Model: b7bfab09-0e80-4b08-9710-6fb63593b8b8:Ships/SWG VT49/VT49CH
+                        Materials: {}
+        -   Entity:
+                Id: e8aff0cf-585b-4a49-a5df-a94e31454259
+                Name: DebugPhysicsShapes
+                Components:
+                    8c4359d58eff8c29f311df3f34abd955: !TransformComponent
+                        Id: 5337f607-1434-49f3-9596-48b20bff99f6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5159a9393dd67b1d84cc73dd0d5420f6: !VT49_Newer.DebugPhysicsShapes,VT49_Newer
+                        Id: 1447db0e-182f-48b4-98a6-45fbcc8ee224
+                        RenderGroup: Group7
+        -   Entity:
+                Id: ee45de47-b969-4abc-baa9-9f907dfaf519
+                Name: vfx-Teleport
+                Components:
+                    5fe0b2913d9692cc69dc9ea15175d4f6: !TransformComponent
+                        Id: 271f45d5-5884-4a6e-bcff-7679e0fa4006
+                        Position: {X: 3.03811216, Y: 0.0, Z: 3.20398831}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Folder: Fighters
+            Entity:
+                Id: f0b9e088-0981-4355-abb5-1bcf23d49f8f
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: ffbf201d-061b-4337-8a71-a22e7220a504
+                        Position: {X: -50.9730034, Y: 21.9758472, Z: 164.707764}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 168972c0-85b5-4a78-9a06-ab0619308ca0
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Folder: Fighters2
+            Entity:
+                Id: f8298ada-b232-4db8-a4ff-86cafa77a0a3
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 8b1fc98f-807a-4aba-b9f8-d82a74185a95
+                        Position: {X: 0.119915843, Y: 39.1646729, Z: 291.230957}
+                        Rotation: {X: 0.0, Y: 0.732830763, Z: 0.0, W: 0.680411}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: 5b3c2872-ec82-4e39-82e7-cd276805b88d
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}
+        -   Folder: Fighters2
+            Entity:
+                Id: fd97658d-2a44-4a59-aca3-0dd2f103d29e
+                Name: TieFighter
+                Components:
+                    d20ceb4151299ba167797919d59068c5: !TransformComponent
+                        Id: 0061aef0-98aa-4b08-98fb-9b0829429aec
+                        Position: {X: -49.7616, Y: 21.9758472, Z: 174.387817}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
+                        Id: ab07b642-beb9-4654-864b-fc41492b6c7e
+                        Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
+                        Materials: {}

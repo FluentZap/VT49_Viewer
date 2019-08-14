@@ -1,0 +1,21 @@
+!Skeleton
+Id: 753b75da-c8ca-4392-9c8d-e26729ec81b0
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../../Blender Files/TieFighter.fbx
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Nodes:
+    6202e5a321cda41b9c2fa336a7141e24: {Name: RootNode, Depth: 0}
+    8f566c40c00b63c79e3c6263cb2eb2ae: {Name: TieFighter, Depth: 1}
+    05b930543623c3ce5c98340e1083a48a: {Name: WingGreebles2, Depth: 2}
+    08a2a2345209a2d72e4b58580d509b12: {Name: ArmGreebles, Depth: 2}
+    2a2c9599efa1f5cdcc2952db8dc81c16: {Name: HullPlates, Depth: 2}
+    3b75ca5d868f83d92d73ac66d7d39812: {Name: WingGreebles, Depth: 2}
+    d343843e619bf4127297a96a0d507f28: {Name: ArmPlates, Depth: 2}
+    dd1c296ee7f2fa75bc5200e204d0c265: {Name: Window, Depth: 2}
+    208ce728137f06df7f10a817a6fc6c04: {Name: MainHull, Depth: 2}
+    defdd79daa7c7996afe3125f67062857: {Name: CockpitGreebles, Depth: 2}
+    1e16c964d1ec4d1c29cacc7ce9d5ae40: {Name: Engines, Depth: 2}
+    8354d48297f0be2287b9907ab31f83b6: {Name: EngineGreebles, Depth: 2}
+~SourceHashes:
+    faca59323c0dc1785ef4a0d4780d8df0~../../../../../../Blender Files/TieFighter.fbx: eaf44d1410a65d0d47547be235122da5

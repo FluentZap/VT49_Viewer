@@ -1,0 +1,142 @@
+!Model
+Id: eae833f5-a115-4fa4-bef7-1b9b4e817a2c
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../../VT49.fbx
+Skeleton: b54d7d58-55a7-4f17-a1f8-4e6ffe224302:Ships/SWG VT49/VT49 Skeleton
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    c2aaa1061edd55c129db252e5748bcff:
+        Name: 11
+        MaterialInstance:
+            Material: df336a4f-0faf-4f85-8682-1281ff8d6fbb:Ships/SWG VT49/11
+            IsShadowCaster: false
+    2ed8ddd13723cbe916a45cba4ea69524:
+        Name: 07
+        MaterialInstance:
+            Material: 21c545df-5e1b-4aa6-a308-e9371889de4a:Ships/SWG VT49/07
+    d069bd9955ffbc4797224b0b3b38cd84:
+        Name: 06
+        MaterialInstance:
+            Material: 5ee10897-3179-49c8-8809-dc22e41bf656:Ships/SWG VT49/06
+    3f4585d7a7d7440cc8a0aec42f5efc9d:
+        Name: 08
+        MaterialInstance:
+            Material: 1866c357-3e9f-4683-9ca3-94294e5effdd:Ships/SWG VT49/08
+    abf39066bd36961551e8a18c3250efae:
+        Name: 03
+        MaterialInstance:
+            Material: 5cb6058a-bbc4-4c54-9de9-6984ffd6cc3c:Ships/SWG VT49/03
+    c0da2f9c4a1248a0b675ac18f260b2a2:
+        Name: 01
+        MaterialInstance:
+            Material: 9a4cb52e-5c64-4ba9-a99b-9d570fe6acd4:Ships/SWG VT49/01
+    d743d033dc8a19f043bc30abada9382a:
+        Name: 04
+        MaterialInstance:
+            Material: 62cd8fda-4c6e-45a2-a097-3a1a2599505d:Ships/SWG VT49/04
+    19447dc137f6c5f256dee5ee326a8229:
+        Name: 12
+        MaterialInstance:
+            Material: 40d5c309-3d10-4546-a8c7-458f0a489860:Ships/SWG VT49/12
+    b41825112c043d884bcdf1cbe8e4a1f8:
+        Name: 15
+        MaterialInstance:
+            Material: 8c7ef517-6239-4d8e-b87b-7e5aad200f6d:Ships/SWG VT49/15
+    06b66117aea7522eeddbe57e04c54f33:
+        Name: 13
+        MaterialInstance:
+            Material: f39be803-2114-416b-82c0-c86592ca62e1:Ships/SWG VT49/13
+    f2d7aa9a6106d0c43c9c5ab31ed66cfd:
+        Name: 28
+        MaterialInstance:
+            Material: e677e864-615e-451e-bc8f-162bfbde6d96:Ships/SWG VT49/28
+    473a6b3c2c7b5b9f1ff322f0c055b257:
+        Name: 24
+        MaterialInstance:
+            Material: cc0dbe2e-82e4-4a70-886a-79278d5cc274:Ships/SWG VT49/24
+    54ad815b6d015aa3d9001d713556554f:
+        Name: 19
+        MaterialInstance:
+            Material: 2200ae22-0d93-4bb4-b4e4-01a12e25286f:Ships/SWG VT49/19
+    e8d1a186141bc743b864e5e888505a4f:
+        Name: 30
+        MaterialInstance:
+            Material: bceb28e7-7d64-4ae1-a45c-4e3a1e3c89f7:Ships/SWG VT49/30
+    6561a6678bb2c1069db8e7a8f931652f:
+        Name: 25
+        MaterialInstance:
+            Material: c7c13008-542e-48c2-ad8a-8b60c0ca2203:Ships/SWG VT49/25
+    0be65596ad56f86114e908a8b13b79cb:
+        Name: 16
+        MaterialInstance:
+            Material: 2b37bd17-4c3a-40ad-ada9-0675f887c4e3:Ships/SWG VT49/16
+    93affa6920fb3ea13252e54f0878367a:
+        Name: 21
+        MaterialInstance:
+            Material: 10a16a1e-c85e-496d-9180-7bb806d711dd:Ships/SWG VT49/21
+    7c1fcd3a37002a3fad9f537f6db74191:
+        Name: 18
+        MaterialInstance:
+            Material: e30fc34c-0b4a-4ff2-b98f-1c00299282f0:Ships/SWG VT49/18
+    85482457f480e02b7f342fafb6c6f62d:
+        Name: 23
+        MaterialInstance:
+            Material: 61807c87-0e9f-4148-91fd-9fe90d867915:Ships/SWG VT49/23
+    183a08d9a1ce09815e2617d0bcdb3cb9:
+        Name: 29
+        MaterialInstance:
+            Material: 3db796b3-a971-48cb-9bc9-bacd802410a1:Ships/SWG VT49/29
+    1f177902b14745a90cc8a9d6c4de5346:
+        Name: 22
+        MaterialInstance:
+            Material: 1a069ff3-27e0-4134-88df-08fdc389efd4:Ships/SWG VT49/22
+            IsShadowCaster: false
+    adca6879f50468db85870637988bc866:
+        Name: 27
+        MaterialInstance:
+            Material: c76706f9-8718-4824-ad19-cf3469c99c39:Ships/SWG VT49/27
+            IsShadowCaster: false
+    150073a3204d99548bfdb2317bf7fe82:
+        Name: 14
+        MaterialInstance:
+            Material: dd7c4f4c-9e7d-4f22-957a-c65b00786750:Ships/SWG VT49/14
+            IsShadowCaster: false
+    00cc43c9f0a13eb6d1d9058f8d5c4e5c:
+        Name: 26
+        MaterialInstance:
+            Material: 04967463-dda9-4538-990d-09861aec06b4:Ships/SWG VT49/26
+            IsShadowCaster: false
+    e79daa660438a183a7ceecf4562b4f50:
+        Name: 20
+        MaterialInstance:
+            Material: a85f6fe0-78f9-4f16-b796-f728134b3518:Ships/SWG VT49/20
+            IsShadowCaster: false
+    4296540aaae3435cd070af5558fe3ae5:
+        Name: 17
+        MaterialInstance:
+            Material: d2c92c38-1a99-4e75-9ac6-4ce169afd657:Ships/SWG VT49/17
+            IsShadowCaster: false
+    6312e31d74fc154b297b5ca46d37293e:
+        Name: 09
+        MaterialInstance:
+            Material: adf6aade-923d-44c7-a2e7-e0e83e5497cf:Ships/SWG VT49/09
+            IsShadowCaster: false
+    0fcdf6a9bbde2640097c413ab00fc4d3:
+        Name: 10
+        MaterialInstance:
+            Material: aeabd12e-e168-4bf9-b63d-d690117a3ee9:Ships/SWG VT49/10
+            IsShadowCaster: false
+    d971d9fd1cb125f26154946c3103bca5:
+        Name: 02
+        MaterialInstance:
+            Material: c859c427-e147-474c-b69a-dc540e2fef9f:Ships/SWG VT49/02
+            IsShadowCaster: false
+    859a7895d485646bcbe03425186448b9:
+        Name: 05
+        MaterialInstance:
+            Material: a29e13d6-0490-45f7-8ded-e7dd624f3203:Ships/SWG VT49/05
+            IsShadowCaster: false
+Modifiers: {}
+~SourceHashes:
+    a3af3cf82ae2a95816abdfbdbf7785fd~../../../../../../VT49.fbx: 522edca3e56c14ba7f81021b492d5465

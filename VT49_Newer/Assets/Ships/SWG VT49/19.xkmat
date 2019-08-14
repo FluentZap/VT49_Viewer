@@ -1,0 +1,28 @@
+!MaterialAsset
+Id: 2200ae22-0d93-4bb4-b4e4-01a12e25286f
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Attributes:
+    Diffuse: !MaterialDiffuseMapFeature
+        DiffuseMap: !ComputeTextureColor
+            Texture: 608ca3d1-a07b-4495-bbdd-85efe276f826:Ships/SWG VT49/vt49_light02
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
+    DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+    Emissive: !MaterialEmissiveMapFeature
+        EmissiveMap: !ComputeTextureColor
+            Texture: 608ca3d1-a07b-4495-bbdd-85efe276f826:Ships/SWG VT49/vt49_light02
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
+        Intensity: !ComputeFloat
+            Value: 3.0
+        UseAlpha: true
+    Overrides:
+        UVScale: {X: 1.0, Y: 1.0}
+Layers: {}

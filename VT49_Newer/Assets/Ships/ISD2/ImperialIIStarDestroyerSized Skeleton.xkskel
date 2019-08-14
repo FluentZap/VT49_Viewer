@@ -1,0 +1,21 @@
+!Skeleton
+Id: 8eebb5cb-fe37-457a-83fd-dbc764909c1b
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../../Blender Files/ImperialIIStarDestroyerSized.fbx
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Nodes:
+    6baa1926091be4b948916c42e47c280f: {Name: RootNode, Depth: 0}
+    569f933a59303904874c5f0bcc05d0ee: {Name: Imperial II Star Destroyer, Depth: 1}
+    85a3cf0b418047372ef924768851d666: {Name: LowerGreebles, Depth: 2}
+    71144ed9423ecdde4188a4cd518bb79d: {Name: MainGreebles2, Depth: 2}
+    7674f644064523a6d965a71f2f3dba4f: {Name: MainGreebles, Depth: 2}
+    2ae9bb6b42453a9ca4e0df84bad4032e: {Name: MainHull, Depth: 2}
+    7861d1660cabbc43e6322530414d8f28: {Name: Engines, Depth: 2}
+    06a38ffcd24260ddf37aa5e16a36118b: {Name: Greebles1, Depth: 2}
+    04077535d9734e2cff6d3c8e66274eee: {Name: Greebles2, Depth: 2}
+    a848e3e2c0064bfb36cb15f67ca7d19c: {Name: HullPlates1, Depth: 2}
+    49e7ec6ff123d293f8bbcdfadc1c01cd: {Name: HullPlates2, Depth: 2}
+    2d1c47d09e017b761857d7d6e6aab443: {Name: TurboCannons, Depth: 2}
+~SourceHashes:
+    12a9570773b9373a9df73a186b6d5d89~../../../../../../Blender Files/ImperialIIStarDestroyerSized.fbx: caf05dc730d7d9c803b72b10fc44c762

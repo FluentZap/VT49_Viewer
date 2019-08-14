@@ -1,0 +1,35 @@
+!Model
+Id: 77e2cb00-ca7b-4e5d-8e54-f217f17100cd
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../../Blender Files/ImperialIIStarDestroyer.fbx
+Skeleton: 1e9ac81f-3623-4254-8338-092c940bf84e:Ships/Star Destroyer/ImperialIIStarDestroyer Skeleton
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    3973fc582dfd74d5a45476e31b1a82a0:
+        Name: YellowLight
+        MaterialInstance:
+            Material: 027a73a2-123d-4fc6-bc8b-0bd47ccf6715:Ships/Star Destroyer/YellowLight
+    e034a8475fea1a68338ca7aff7529dd7:
+        Name: ScratchedMetal
+        MaterialInstance:
+            Material: null
+    8fa8e8a6faec1175e6f6e3d1da335ac6:
+        Name: ScratchedMetalDark
+        MaterialInstance:
+            Material: null
+    2c2b40acccafab92c64db11902084b5a:
+        Name: Dark
+        MaterialInstance:
+            Material: 739aa765-b676-46e5-9df8-57437607d293:Ships/XQ6/Dark
+    ee6380699d98cd7e2f46c666c1b907ee:
+        Name: ReflectiveGlass
+        MaterialInstance:
+            Material: f9c58b32-c620-4db5-ae61-ce3882b230e8:Glass
+    2b40ea6be029a61fbbcb2d55dc88ea9d:
+        Name: BlueEngineGlow
+        MaterialInstance:
+            Material: null
+Modifiers: {}
+~SourceHashes:
+    4135097279b98efa3510d6386358f20a~../../../../../../Blender Files/ImperialIIStarDestroyer.fbx: 9840a547fe8fc16a3ea02b0a3f84f2a8

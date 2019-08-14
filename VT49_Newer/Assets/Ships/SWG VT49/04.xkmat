@@ -1,0 +1,18 @@
+!MaterialAsset
+Id: 62cd8fda-4c6e-45a2-a097-3a1a2599505d
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Attributes:
+    Diffuse: !MaterialDiffuseMapFeature
+        DiffuseMap: !ComputeTextureColor
+            Texture: 2158ce88-1c88-4d72-8cc0-d5da3a4c632c:Ships/SWG VT49/vt49_engine_s01
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
+    DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+    Overrides:
+        UVScale: {X: 1.0, Y: 1.0}
+    CullMode: Front
+Layers: {}

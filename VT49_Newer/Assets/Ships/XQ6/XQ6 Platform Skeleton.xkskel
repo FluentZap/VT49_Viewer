@@ -1,0 +1,22 @@
+!Skeleton
+Id: 4f0c2b09-4238-4e51-a34a-67b3f616658d
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../../Blender Files/XQ6 Platform.fbx
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Nodes:
+    3393bf0746ee93459686ec70b36b288f: {Name: RootNode, Depth: 0}
+    8ca3ab7d858e936b8b9d7ed1a4890b16: {Name: XQ6 Platform, Depth: 1}
+    6416647fba21220aec6a3fa3cbfdd90b: {Name: MainSection, Depth: 2}
+    dc48e88a8ec5cea58dae2d46abe00baf: {Name: MainSection2, Depth: 2}
+    6cdc0f397b8804adf78a4a5024abed83: {Name: Empty120Degrees, Depth: 2}
+    ae4f67c44593e206a22320cdf042bb14: {Name: MainSectionGreebles4, Depth: 2}
+    aef155138f3345f69f0987594b26387c: {Name: Platforms, Depth: 2}
+    c6396a8dca5e21e43110549a2e39e306: {Name: MainSectionGreebles2, Depth: 2}
+    be475c472a878a141f35ebc72a92458d: {Name: PlatformGreebles, Depth: 2}
+    d845f7b75179dc677fc9d620b57f2b99: {Name: Empty60Degrees, Depth: 2}
+    853ad182bbe50c58675be130ab6b6f59: {Name: MainSectionGreebles, Depth: 2}
+    4f09c1801f336defc375b5357963662f: {Name: MainSectionGreebles3, Depth: 2}
+    96813dc89ead0aef794ed76c631ab920: {Name: PlatformGreebles2, Depth: 2}
+~SourceHashes:
+    261d816213623b6199d73cd9dec8650e~../../../../../../Blender Files/XQ6 Platform.fbx: 6e48a493a98e9475751d951bed8fe5c3

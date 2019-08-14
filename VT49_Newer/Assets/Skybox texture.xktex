@@ -1,0 +1,8 @@
+!Texture
+Id: d8eaa244-9b2c-4869-8cee-cd72877f64dd
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/Untitled3.dds
+Type: !ColorTextureType
+    UseSRgbSampling: false
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

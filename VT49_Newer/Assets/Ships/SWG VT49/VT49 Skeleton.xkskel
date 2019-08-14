@@ -1,0 +1,37 @@
+!Skeleton
+Id: b54d7d58-55a7-4f17-a1f8-4e6ffe224302
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../../VT49.fbx
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Nodes:
+    d221975dab534d11a7d8de3a869570e7: {Name: RootNode, Depth: 0}
+    7a7009e3ce7d73ebd1bf826221b2b1e7: {Name: Engines_Type2_Glow, Depth: 1}
+    f58ecd765e6fe5f7be0c2bce2eeb9b16: {Name: Engines_Glow, Depth: 1}
+    79fc4968586fd02f95a6879c799563c5: {Name: Radar_Type2, Depth: 1}
+    8e8665afa24cc6fcf5fbd7fdd28d0570: {Name: Bosters_Type1_Glows, Depth: 1}
+    fb3798d32f9060b2931e8c0f05563036: {Name: Radar_Type1, Depth: 1}
+    334f991a3c6f5a9e7dc66858bd121d58: {Name: Top_Turret_Guns_R, Depth: 1}
+    58c5e59d0ef05c635523e1e9a7b2545f: {Name: Boosters_Type2, Depth: 1}
+    bcc9cb32006dc09941d1bf1caf265275: {Name: Bottom_Turret_Mount, Depth: 1}
+    87de967447d1a191071bcc87cf92802f: {Name: Main_Hull, Depth: 1}
+    b198cfb172d7db4b4000aa1ebd246944: {Name: Engines, Depth: 1}
+    e4051b1e743c6e090b7c026f48c9c6f1: {Name: Main_Hull_Interior, Depth: 1}
+    de45078ad8f03c1a1393850c82bccf9c: {Name: Bottom_Turret2, Depth: 1}
+    4420234ba8c256503c5e8850e821cfa0: {Name: Window_Glass, Depth: 1}
+    2effd93f03595bd1798c72deb256d8e6: {Name: Bottom_Turret_Guns_R, Depth: 1}
+    4863c9c74fceb146450aa6d0d0d641f9: {Name: Top_Turret_Mount, Depth: 1}
+    9675192afbcf15e073a44815da081192: {Name: Top_Turret2_Gun_R, Depth: 1}
+    670698f0e1184e11af0b5c288747f6c4: {Name: Top_Turret, Depth: 1}
+    791fe04f8b09f0ba2116e63c95b1da53: {Name: Bottom_Turret, Depth: 1}
+    5920aece00f279aedb406419e1657258: {Name: Top_Turret2, Depth: 1}
+    81e416ad7598de11c4dd56db58608e2f: {Name: Boosters_Type2_Glow, Depth: 1}
+    40aa3d1644e714ef12ca6b8cdfc9f1f9: {Name: Top_Turret2_Gun_L, Depth: 1}
+    abd4ee138e1f212761e86c088b395c08: {Name: Bosters_Type1, Depth: 1}
+    0acf77c96bdade41e4f32bdee132762d: {Name: Bottom_Turret_Guns_L, Depth: 1}
+    265aa072a42d51177d6a8123626baf1c: {Name: Engines_Type2, Depth: 1}
+    79b46199741ea4fd44b2611244af6209: {Name: Bottom_Turret2_Gun_L, Depth: 1}
+    e3d3fc4a8614a256257d1cba5295d796: {Name: Top_Turret_Guns_L, Depth: 1}
+    84d899bfd447be9438a3695b69d48b7a: {Name: Bottom_Turret2_Gun_R, Depth: 1}
+~SourceHashes:
+    aab17ed36a9aab8b87875c46140986a8~../../../../../../VT49.fbx: 522edca3e56c14ba7f81021b492d5465

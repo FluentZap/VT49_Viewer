@@ -1,0 +1,39 @@
+!Model
+Id: 06b4d9a4-3733-4742-952e-c016f63a7171
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../../Blender Files/TieFighter.fbx
+Skeleton: 753b75da-c8ca-4392-9c8d-e26729ec81b0:Ships/LN-TIE/TieFighter Skeleton
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    dd24679cbe4fbc2b996d43a61226ae46:
+        Name: ScratchedMetal
+        MaterialInstance:
+            Material: af52e2f1-02f5-42c6-bdde-0227282e3a15:Ships/LN-TIE/ScratchedMetal
+    ed76677b311369de2ba729e72268719e:
+        Name: Black
+        MaterialInstance:
+            Material: 426d232b-6b89-4b06-8ddb-8551c24c4a3e:Ships/LN-TIE/Black
+    37335a778bf00e7a94f55e3a8926f4e4:
+        Name: ScratchedMetalDark
+        MaterialInstance:
+            Material: a98af56f-8f09-4868-bf58-2f92b69787ec:Ships/LN-TIE/ScratchedMetalDark
+    7caa9d1bf31d69ab4fd1f79af14a94f6:
+        Name: ReflectiveGlass
+        MaterialInstance:
+            Material: d2aa4395-8f2a-44a3-90cc-ea8f64a448dc:Ships/LN-TIE/ReflectiveGlass
+    7905101ff14d1d50d5c6171eb6828326:
+        Name: TieWingMesh
+        MaterialInstance:
+            Material: 58f77fdb-6b5a-41c1-bbc5-9ce4a2e5cfbe:Ships/LN-TIE/TieWingMesh
+    8da7f900c0f473434ca24dd8847aa347:
+        Name: ScratchedMetalShinyBlack
+        MaterialInstance:
+            Material: 418c151a-4a47-4a22-8b09-48df4975f9ca:Ships/LN-TIE/ScratchedMetalShinyBlack
+    740efbfec3a3cb004c6bb828ffacaa65:
+        Name: RedEngineGlow
+        MaterialInstance:
+            Material: 04cbfb02-8dc6-4aa7-97e2-45097b30b994:Ships/LN-TIE/RedEngineGlow
+Modifiers: {}
+~SourceHashes:
+    fcde8eb1d3fa0ad65dbe7d54707255a7~../../../../../../Blender Files/TieFighter.fbx: eaf44d1410a65d0d47547be235122da5

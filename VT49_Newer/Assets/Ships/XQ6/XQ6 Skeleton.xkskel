@@ -1,0 +1,11 @@
+!Skeleton
+Id: b6154279-d52d-4ee1-b3b7-2c68055e0aae
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file E:/VT49/XQ6.obj
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Nodes:
+    0fa64c2f52adf222d78b4839bcfff8d4: {Name: XQ6.obj, Depth: 0}
+    22b886c6143441f90721e3f27e29234e: {Name: Platforms_Platforms.001, Depth: 1}
+~SourceHashes:
+    4c19c93fa67e20ad3f182a5c53746aad~E:/VT49/XQ6.obj: 205abd85871cb77d39f39a740024a26f

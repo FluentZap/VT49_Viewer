@@ -1,0 +1,35 @@
+!Model
+Id: f53f5419-3b63-46f7-b253-8c26e5cb4e0f
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../../Blender Files/ImperialIIStarDestroyerSized.fbx
+Skeleton: 8eebb5cb-fe37-457a-83fd-dbc764909c1b:Ships/ISD2/ImperialIIStarDestroyerSized Skeleton
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    40828d1ad70e0a8c165d58403320203c:
+        Name: YellowLight
+        MaterialInstance:
+            Material: a979e28d-8bfa-4563-897e-c047cb8f74c9:Ships/ISD2/YellowLight
+    99f866a143cc72bf1171a965c4c305bc:
+        Name: ScratchedMetal
+        MaterialInstance:
+            Material: b954941a-9d4f-4a57-81cf-1d7946acf52e:Ships/ISD2/ScratchedMetal
+    e9dafe66cb1e4d1c7c25307397ee585d:
+        Name: ScratchedMetalDark
+        MaterialInstance:
+            Material: 49fc81ef-9d28-4db4-892e-666a46690ad2:Ships/ISD2/ScratchedMetalDark
+    e02c6f878e4c1108b636251475f549d8:
+        Name: Dark
+        MaterialInstance:
+            Material: 451e6c33-3fc2-424b-a59f-633aba52b57c:Ships/ISD2/Dark
+    6cc64a7840aab97fb476bb72c81efb38:
+        Name: ReflectiveGlass
+        MaterialInstance:
+            Material: 8c976650-bb9a-48bc-a0b2-62bcfc23e886:Ships/ISD2/ReflectiveGlass
+    39b92dedb36113872b0e3714793c13d5:
+        Name: BlueEngineGlow
+        MaterialInstance:
+            Material: 8f0dbeed-c092-4fc5-8a53-4d8527ccc274:Ships/ISD2/BlueEngineGlow
+Modifiers: {}
+~SourceHashes:
+    85546c153a989f412df0b1a2b58b34d8~../../../../../../Blender Files/ImperialIIStarDestroyerSized.fbx: caf05dc730d7d9c803b72b10fc44c762

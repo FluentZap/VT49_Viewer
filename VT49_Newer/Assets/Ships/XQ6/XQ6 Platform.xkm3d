@@ -1,0 +1,43 @@
+!Model
+Id: 8b8b4bc0-7261-4d63-9cb5-b12964a56402
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../../Blender Files/XQ6 Platform.fbx
+Skeleton: 4f0c2b09-4238-4e51-a34a-67b3f616658d:Ships/XQ6/XQ6 Platform Skeleton
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    a96ed0bfc245996fccbe970a56356d88:
+        Name: ScratchedMetal
+        MaterialInstance:
+            Material: 5874ff11-eb62-43d8-a8d8-3374109e87c6:Ships/XQ6/ScratchedMetal
+    3385e02b68433bf9638a079a222a2a37:
+        Name: ScratchedMetalDark
+        MaterialInstance:
+            Material: 7a1521bf-2930-4f93-9075-4f7155d8acb6:Ships/XQ6/ScratchedMetalDark
+    c8fd0038818a9d4317683dedfcdd2805:
+        Name: ScratchedMetalRed
+        MaterialInstance:
+            Material: 6c77217d-8057-40c9-82d1-ab794223ef6c:Ships/XQ6/ScratchedMetalRed
+    7ff7bcce3ead26e37d8fcdf93272a0b2:
+        Name: Dark
+        MaterialInstance:
+            Material: 739aa765-b676-46e5-9df8-57437607d293:Ships/XQ6/Dark
+    a759704d10cc139033d0bd39fa6eeaa5:
+        Name: RedGlow
+        MaterialInstance:
+            Material: 24711fb6-3465-48fb-bafc-e4c5cc0e2cca:Ships/XQ6/RedGlow
+    319d9520e82b7aa5ab52bb5cc487d481:
+        Name: YellowGlow
+        MaterialInstance:
+            Material: a418678f-f53c-45bc-bb5e-8a7c18f79b93:Ships/XQ6/YellowGlow
+    f8ba185b1a110ec944e9a7034a91bb1e:
+        Name: ForceField
+        MaterialInstance:
+            Material: b69eca15-8e8e-42b5-b8da-82c2fb3c4325:Ships/XQ6/ForceField
+    841919f09c06e24ef153804b262795ee:
+        Name: BlueGlow
+        MaterialInstance:
+            Material: b671de00-93b0-47a1-9ae7-a60429422c73:Ships/XQ6/BlueGlow
+Modifiers: {}
+~SourceHashes:
+    5b8f8efcb10258ebc850305b93f23912~../../../../../../Blender Files/XQ6 Platform.fbx: 6e48a493a98e9475751d951bed8fe5c3

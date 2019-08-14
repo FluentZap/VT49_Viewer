@@ -1,0 +1,11 @@
+!Skeleton
+Id: 360f8401-88d4-4028-bbeb-0be8fb962d8a
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../../../Desktop/VT49CH.obj
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Nodes:
+    7a8dac9cc7277854060f3dac096a0a1b: {Name: VT49CH.obj, Depth: 0}
+    1cc59399c5e6128a188ab642d3139315: {Name: Window_Glass, Depth: 1}
+~SourceHashes:
+    c0f0696b26a111e6538fc63535a77181~../../../../../../../Desktop/VT49CH.obj: 80f6fb70e816813ed8379e477f844363

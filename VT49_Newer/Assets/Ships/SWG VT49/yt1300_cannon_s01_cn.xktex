@@ -1,0 +1,8 @@
+!Texture
+Id: 4dbf5cbe-bbd2-494f-8b0c-538dd6aed666
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../../Blender Files/VT-49 Decimator SWG Model Rip/yt1300_cannon_s01_cn.dds
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+    PremultiplyAlpha: false

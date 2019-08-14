@@ -1,0 +1,15 @@
+!Model
+Id: d7a2ab71-4c00-42d6-b04a-6a72db105196
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../Blender Files/Box.fbx
+Skeleton: 3f614117-9f06-4b01-813c-21897fa9eae9:Ships/Box Skeleton
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    ef99411d110fb172b59a39bedae9bdd3:
+        Name: Material
+        MaterialInstance:
+            Material: null
+Modifiers: {}
+~SourceHashes:
+    6f8023cd3b09526e9f228fa0cc930fa0~../../../../../Blender Files/Box.fbx: 9ff554af12d0bea0f24f3b9896f12f8a

@@ -1,0 +1,13 @@
+!Skeleton
+Id: 3f614117-9f06-4b01-813c-21897fa9eae9
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../Blender Files/Box.fbx
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Nodes:
+    eba5555d1a3d0009628735b643a8ce6b: {Name: RootNode, Depth: 0}
+    1f0b8d43eddb7ef0eb2d76667578fa7e: {Name: Cube, Depth: 1}
+    30070a30ead2134bc7926fd03373599d: {Name: Lamp, Depth: 1}
+    ab46d6492f18982436493f8b3a968a4f: {Name: Camera, Depth: 1}
+~SourceHashes:
+    7f3e0ce9a8e1b1b018d8b5f7306f75e8~../../../../../Blender Files/Box.fbx: 9ff554af12d0bea0f24f3b9896f12f8a

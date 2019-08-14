@@ -1,0 +1,8 @@
+!Texture
+Id: 26797a3b-03ec-4d87-9249-3dfd4c042f6e
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../../Blender Files/VT-49 Decimator SWG Model Rip/vt49_engine_s02.dds
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+    PremultiplyAlpha: false
