@@ -20,7 +20,6 @@ Hierarchy:
         - ref!! e8aff0cf-585b-4a49-a5df-a94e31454259
         - ref!! 21c56a66-1fe1-4b23-8be4-ab55cdc37a6a
         - ref!! 825adf70-a5ea-4fe9-a869-d21d0568c504
-        - ref!! 8bd62889-64bd-40a3-b2f1-48376b3d8170
         - ref!! ee45de47-b969-4abc-baa9-9f907dfaf519
         - ref!! 7c9a94f9-cc6a-4b76-807d-0614efd5836c
         - ref!! 37e283fe-0e90-4aa9-87b5-8b985859937e
@@ -469,20 +468,6 @@ Hierarchy:
                             Skybox: 39265df4-d32a-418d-baa2-ba073d499ee1:BlueSky
                         Intensity: 0.1
         -   Entity:
-                Id: 8bd62889-64bd-40a3-b2f1-48376b3d8170
-                Name: Box
-                Components:
-                    c7ff8f4399a589adee94dafbfa5ffd76: !TransformComponent
-                        Id: 4263c133-a533-4838-9653-562c0f4dfff6
-                        Position: {X: 0.0, Y: 0.0, Z: 30.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    dbe50de8932f13b08293805631df7681: !ModelComponent
-                        Id: 044604fa-522f-4525-a59c-622bf1698c6f
-                        Model: d7a2ab71-4c00-42d6-b04a-6a72db105196:Ships/Box
-                        Materials: {}
-        -   Entity:
                 Id: 99dc6aaa-cb24-42e8-91e1-f861c5fb9f60
                 Name: VT-49 FrontInside
                 Components:
@@ -526,7 +511,6 @@ Hierarchy:
                             4c11beb2ead1957b6bf75c92fa3bf2fc: ref!! b6b9de74-fa44-41c1-a4b1-4d026e4c5bd0
                             1aaac47eb99fb89f4874bb5c368b7417: ref!! b464a934-e387-47f2-8897-7862c1887438
                             1271130a350672d9da139f761279b0c5: ref!! 0913f901-b47a-4ebb-be8b-db29f0adab3d
-                            7f60c022d93ccea1d5fc42bb412a021b: ref!! 00f50411-b4b2-44d2-a461-54e5d04abafe
                     f5b8ae62ff2bb605d3205c9921e6f73e: !ModelComponent
                         Id: 7efb04dc-d4f9-4c96-9bc1-907accd63bf5
                         Model: eae833f5-a115-4fa4-bef7-1b9b4e817a2c:Ships/SWG VT49/VT49_2
@@ -681,20 +665,6 @@ Hierarchy:
                     587c726c0a1f8f7e00484e1333baf6e0: !ModelComponent
                         Id: 5a287b0f-34aa-41e0-9131-98f7cdb47101
                         Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
-                        Materials: {}
-        -   Entity:
-                Id: e6ff698f-95de-42e0-aab3-8e1b2db1a9bd
-                Name: VT49CH
-                Components:
-                    9ff8c4037d7f3d83de7534199ffe23c4: !TransformComponent
-                        Id: 00f50411-b4b2-44d2-a461-54e5d04abafe
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1e443bc79cce2d52f1a8ac14a1891930: !ModelComponent
-                        Id: 9550d50d-bb0d-4db0-b554-fbc4f5e3fad4
-                        Model: b7bfab09-0e80-4b08-9710-6fb63593b8b8:Ships/SWG VT49/VT49CH
                         Materials: {}
         -   Entity:
                 Id: e8aff0cf-585b-4a49-a5df-a94e31454259
