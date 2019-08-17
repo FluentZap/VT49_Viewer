@@ -20,7 +20,9 @@ namespace VT49_Newer
         private NetworkStream stream;
         public Entity Ship { get; set; } = null;
 
-        public CameraComponent CameraInsideFront { get; set; } = null;
+		public Entity Camera { get; set; } = null;
+
+		public CameraComponent CameraInsideFront { get; set; } = null;
         public CameraComponent CameraOutsideFront { get; set; } = null;
 
 
@@ -144,6 +146,39 @@ namespace VT49_Newer
 					quat.Y = BitConverter.ToSingle(b, sizeof(float) * 4);
 					quat.Z = BitConverter.ToSingle(b, sizeof(float) * 5);
 					quat.W = BitConverter.ToSingle(b, sizeof(float) * 6);
+
+					//Matrix mat = Matrix.Identity * Matrix.Translation(Ship.Transform.Position) * Matrix.RotationQuaternion(Ship.Transform.Rotation);
+					//Matrix mat = Matrix.Translation(Ship.Transform.Position) * Matrix.RotationQuaternion(Ship.Transform.Rotation);
+
+					//mat.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation);					
+					//Camera.Transform.Position = translation;
+					//Camera.Transform.Rotation = rotation;
+
+					//Camera.Transform.Rotation = Ship.Transform.Rotation;
+					//Camera.Transform.Position = Ship.Transform.Position;
+					//Matrix cameraTransform = Matrix.RotationQuaternion(Ship.Transform.Rotation) + Matrix.Translation(Ship.Transform.Position + new Vector3(0, 1, -5));
+					//Camera.Transform.Position = translation;
+					//Camera.Transform.Rotation = rotation;
+
+					//Camera.Transform.Position = Vector3.Clamp(
+					//	Vector3.Lerp(Camera.Transform.Position, Ship.Transform.Position, 0.125f),
+					//	Ship.Transform.Position * 0.01f,
+					//	Ship.Transform.Position * 10f
+					//	);
+
+					//float glow = Math.Abs(Vector3.Distance(Ship.Transform.Position, pos));					
+
+					//Ship.Components.Get<ModelComponent>().GetMaterial(0).Passes[0].Parameters.Set()
+
+					float distance = Math.Abs(Vector3.Distance(pos, Camera.Transform.Position));
+					float smooth = 0.125f;
+					if (distance > 2)
+					{
+						smooth = distance * 0.0625f;
+					}
+
+					Camera.Transform.Position = Vector3.Lerp(Camera.Transform.Position, pos, smooth);
+					Camera.Transform.Rotation = Quaternion.Lerp(Camera.Transform.Rotation, quat, 0.125f);
 
 					Ship.Transform.Position = pos;
 					Ship.Transform.Rotation = quat;

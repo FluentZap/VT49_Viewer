@@ -6,7 +6,7 @@ ChildrenIds: []
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
-        - ref!! cef9286d-fb66-4d72-8756-af47c6d3e8fc
+        - ref!! 2a9f50d6-a821-4b9e-92e0-0d92c26e84f4
         - ref!! 2d62e2e4-d094-4996-9b41-7c0a1338193e
         - ref!! 89446736-e1a9-46f1-a36c-8e71437c637c
         - ref!! 1e075557-8589-423e-a349-f13e63468cc6
@@ -89,6 +89,7 @@ Hierarchy:
                         Children: {}
                     7cf2d447bb790c6a776ba8a640bfef3e: !CameraComponent
                         Id: 18f2a97a-47bf-4b74-b0b8-84657b7fca6c
+                        Enabled: false
                         Name: FrontOutside
                         Projection: Perspective
                         VerticalFieldOfView: 60.0
@@ -173,6 +174,7 @@ Hierarchy:
                         Id: 4728bcc2-b341-4d4f-b472-7a2ef70bb9d5
                         ui: a7a9976e-be01-44ce-aaf8-526d84034bb6:Page
                         Ship: ref!! a0f5ba57-7bb4-495e-bd85-9b802711dfce
+                        Camera: ref!! 2a9f50d6-a821-4b9e-92e0-0d92c26e84f4
                         CameraInsideFront: ref!! b9a84f6c-1b32-4f14-b87c-895ed7a5f188
                         CameraOutsideFront: ref!! 18f2a97a-47bf-4b74-b0b8-84657b7fca6c
         -   Folder: Fighters
@@ -222,6 +224,17 @@ Hierarchy:
                             39a519a7cd438ba0fa807639f5f971bc~0: 027a73a2-123d-4fc6-bc8b-0bd47ccf6715:Ships/Star Destroyer/YellowLight
                             0edcdf618a7e446c35667179b19b17c1~3: 739aa765-b676-46e5-9df8-57437607d293:Ships/XQ6/Dark
                             d64c435658cda6d8d7d5ed9200f20b22~4: f9c58b32-c620-4db5-ae61-ce3882b230e8:Glass
+        -   Entity:
+                Id: 2a9f50d6-a821-4b9e-92e0-0d92c26e84f4
+                Name: CameraArm
+                Components:
+                    e4d589650721421071c35b0960fd6441: !TransformComponent
+                        Id: 71ca2baf-e157-4928-aabc-9c77d54f5c54
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: -1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            1c52000574b2f00f8175dd2f52bd2709: ref!! 788d2bef-7da3-404b-885f-17e2ab61ca16
         -   Folder: Fighters2
             Entity:
                 Id: 2d4d1bd4-9cbb-46f7-add8-fb84bb596e34
@@ -642,15 +655,17 @@ Hierarchy:
                 Components:
                     b3f0d1b87d5c80057d5b33080db80bc6: !TransformComponent
                         Id: 788d2bef-7da3-404b-885f-17e2ab61ca16
-                        Position: {X: 0.0, Y: 1.7, Z: -5.0}
-                        Rotation: {X: 0.0, Y: -1.0, Z: 0.0, W: -4.371139E-08}
+                        Position: {X: 0.0, Y: 1.0, Z: 5.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     e443af0322e7ceb5878eb97111edc8ce: !CameraComponent
                         Id: 2aee1644-4f73-4a1b-aa59-cd7443b753dd
-                        Name: null
+                        Name: Camera
                         Projection: Perspective
-                        Slot: 00000000-0000-0000-0000-000000000000
+                        VerticalFieldOfView: 60.0
+                        FarClipPlane: 20000.0
+                        Slot: 3d803371-91dc-4734-b62a-f22f4eeac169
         -   Folder: Fighters
             Entity:
                 Id: d5866618-2c1b-405e-a271-3594aa7b549e
