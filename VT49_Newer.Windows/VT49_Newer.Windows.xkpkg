@@ -14,4 +14,7 @@ OutputGroupDirectories: {}
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []
-RootAssets: []
+RootAssets:
+    - 3429e080-f909-446b-a50e-bbafec8c9c78:SpaceObjects/Asteroid_Type1
+    - 7fe52913-08f6-43c5-ab66-91eebb0f71ed:SpaceObjects/Asteroid_Type2
+    - 94a4f51e-8fd3-4554-93c7-0910e83449a5:SpaceObjects/Asteroid_Type3

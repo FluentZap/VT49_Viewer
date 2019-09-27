@@ -1,0 +1,8 @@
+!MaterialAsset
+Id: 598eb2bd-f09c-40e2-95a3-f3916a2cabcb
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Attributes:
+    Overrides:
+        UVScale: {X: 1.0, Y: 1.0}
+Layers: {}

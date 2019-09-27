@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using Xenko.Core.Mathematics;
+using Xenko.Rendering;
 using Xenko.Input;
 using Xenko.Engine;
 using Xenko.UI;
@@ -22,22 +23,68 @@ namespace VT49_Newer
 
 		public Entity Camera { get; set; } = null;
 
-		public CameraComponent CameraInsideFront { get; set; } = null;
-        public CameraComponent CameraOutsideFront { get; set; } = null;
-
-
-        
-        //private string ClientIP = "127.0.0.1";
-        public UIPage ui;
+		//private string ClientIP = "127.0.0.1";
+		public UIPage ui;
         private EditText TextBox;
         private Button ConnectButton;
 
         private Button CameraButton_InsideFront;
         private Button CameraButton_OutsideFront;
 
+
+
+
+		public void SetModelDisplay()
+		{
+			var modelComponent = Ship.Get<ModelComponent>();
+			Dictionary<string, int> Nodes = new Dictionary<string, int>();
+			for (int nodeIndex = 0; nodeIndex < modelComponent.Model.Skeleton.Nodes.Length; nodeIndex++)
+			{
+				var nodeName = modelComponent.Skeleton.Nodes[nodeIndex].Name;
+				Nodes.Add(nodeName, nodeIndex);
+			}
+
+			//modelComponent.Skeleton.NodeTransformations[Nodes["Engines"]].Transform.Scale = new Vector3(0, 0, 0);
+			//modelComponent.Skeleton.NodeTransformations[Nodes["Engines_Glow"]].Transform.Scale = new Vector3(0, 0, 0);
+
+			modelComponent.Skeleton.NodeTransformations[Nodes["Engines_Type2"]].Transform.Scale = new Vector3(0, 0, 0);
+			modelComponent.Skeleton.NodeTransformations[Nodes["Engines_Type2_Glow"]].Transform.Scale = new Vector3(0, 0, 0);
+
+			modelComponent.Skeleton.NodeTransformations[Nodes["Radar_Type1"]].Transform.Scale = new Vector3(0, 0, 0);
+			modelComponent.Skeleton.NodeTransformations[Nodes["Radar_Type2"]].Transform.Scale = new Vector3(0, 0, 0);
+
+			modelComponent.Skeleton.NodeTransformations[Nodes["Bosters_Type1"]].Transform.Scale = new Vector3(0, 0, 0);
+			modelComponent.Skeleton.NodeTransformations[Nodes["Bosters_Type1_Glows"]].Transform.Scale = new Vector3(0, 0, 0);
+
+			modelComponent.Skeleton.NodeTransformations[Nodes["Boosters_Type2"]].Transform.Scale = new Vector3(0, 0, 0);
+			modelComponent.Skeleton.NodeTransformations[Nodes["Boosters_Type2_Glow"]].Transform.Scale = new Vector3(0, 0, 0);
+
+			modelComponent.Skeleton.NodeTransformations[Nodes["Top_Turret_Guns_R"]].Transform.Scale = new Vector3(0, 0, 0);
+			modelComponent.Skeleton.NodeTransformations[Nodes["Top_Turret_Guns_L"]].Transform.Scale = new Vector3(0, 0, 0);
+
+			modelComponent.Skeleton.NodeTransformations[Nodes["Bottom_Turret_Guns_R"]].Transform.Scale = new Vector3(0, 0, 0);
+			modelComponent.Skeleton.NodeTransformations[Nodes["Bottom_Turret_Guns_L"]].Transform.Scale = new Vector3(0, 0, 0);
+
+			modelComponent.Skeleton.NodeTransformations[Nodes["Top_Turret2_Gun_R"]].Transform.Scale = new Vector3(0, 0, 0);
+			modelComponent.Skeleton.NodeTransformations[Nodes["Top_Turret2_Gun_L"]].Transform.Scale = new Vector3(0, 0, 0);
+
+			modelComponent.Skeleton.NodeTransformations[Nodes["Bottom_Turret2_Gun_R"]].Transform.Scale = new Vector3(0, 0, 0);
+			modelComponent.Skeleton.NodeTransformations[Nodes["Bottom_Turret2_Gun_L"]].Transform.Scale = new Vector3(0, 0, 0);
+
+
+			modelComponent.Skeleton.NodeTransformations[Nodes["Bottom_Turret_Mount"]].Transform.Scale = new Vector3(0, 0, 0);
+			modelComponent.Skeleton.NodeTransformations[Nodes["Bottom_Turret"]].Transform.Scale = new Vector3(0, 0, 0);
+			modelComponent.Skeleton.NodeTransformations[Nodes["Bottom_Turret2"]].Transform.Scale = new Vector3(0, 0, 0);
+
+			modelComponent.Skeleton.NodeTransformations[Nodes["Top_Turret_Mount"]].Transform.Scale = new Vector3(0, 0, 0);
+			modelComponent.Skeleton.NodeTransformations[Nodes["Top_Turret"]].Transform.Scale = new Vector3(0, 0, 0);
+			modelComponent.Skeleton.NodeTransformations[Nodes["Top_Turret2"]].Transform.Scale = new Vector3(0, 0, 0);
+		}
+
+
         public override void Start()
         {
-            /*
+			/*
             IPAddress localAdd = IPAddress.Parse("127.0.0.1");
             TcpListener listener = new TcpListener(localAdd, 4949);
             listener.Start();
@@ -60,9 +107,29 @@ namespace VT49_Newer
             Console.ReadLine();
             */
 
-            //ui = Entity.Components.Get<UIComponent>().Page;                       
+			//ui = Entity.Components.Get<UIComponent>().Page;
 
-            TextBox = ui.RootElement.FindVisualChildOfType<EditText>("IPBox");
+			//Entity asteroid_1 = new Entity(new Vector3(10, 10, 10), "Asteroid_1");
+			//ModelComponent model = new ModelComponent()
+			//asteroid_1.Components.Add()
+
+			//Scene.Entities.Add();
+
+
+
+			// Load a model (replace URL with valid URL)
+			var model = Content.Load<Model>("SpaceObjects/Asteroid_Type1");
+			
+			// Create a new entity to add to the scene
+			Entity entity = new Entity(new Vector3(15, 0, 15), "Asteroid_1") { new ModelComponent { Model = model } };
+			entity.Transform.Scale = new Vector3(10, 10, 10);
+
+			// Add a new entity to the scene
+			SceneSystem.SceneInstance.RootScene.Entities.Add(entity);
+
+			SetModelDisplay();
+
+			TextBox = ui.RootElement.FindVisualChildOfType<EditText>("IPBox");
             ConnectButton = ui.RootElement.FindVisualChildOfType<Button>("ConnectButton");
             CameraButton_InsideFront = ui.RootElement.FindVisualChildOfType<Button>("CameraInsideFront");
             CameraButton_OutsideFront = ui.RootElement.FindVisualChildOfType<Button>("CameraOutsideFront");
@@ -84,24 +151,24 @@ namespace VT49_Newer
                 }
             };
 
-            CameraButton_InsideFront.Click += delegate
-            {
-                disableCameras();
-                CameraInsideFront.Enabled = true;                
-            };
+            //CameraButton_InsideFront.Click += delegate
+            //{
+            //    disableCameras();
+            //    CameraInsideFront.Enabled = true;                
+            //};
 
-            CameraButton_OutsideFront.Click += delegate
-            {
-                disableCameras();
-                CameraOutsideFront.Enabled = true;                
-            };
+            //CameraButton_OutsideFront.Click += delegate
+            //{
+            //    disableCameras();
+            //    CameraOutsideFront.Enabled = true;                
+            //};
 
 
-            void disableCameras()
-            {
-                CameraInsideFront.Enabled = false;
-                CameraOutsideFront.Enabled = false;
-            }
+            //void disableCameras()
+            //{
+            //    CameraInsideFront.Enabled = false;
+            //    CameraOutsideFront.Enabled = false;
+            //}
 
 
 
@@ -134,7 +201,7 @@ namespace VT49_Newer
             {
                 while (client.Available > 0)
                 {
-                    byte[] b = new byte[sizeof(float) * 7];
+					byte[] b = new byte[sizeof(float) * 7];
                     stream.Read(b, 0, sizeof(float) * 7);
                     Vector3 pos = new Vector3();
 					Quaternion quat = new Quaternion();
@@ -170,23 +237,53 @@ namespace VT49_Newer
 
 					//Ship.Components.Get<ModelComponent>().GetMaterial(0).Passes[0].Parameters.Set()
 
-					float distance = Math.Abs(Vector3.Distance(pos, Camera.Transform.Position));
-					float smooth = 0.125f;
-					if (distance > 2)
+					float PositionDistance = Math.Abs(Vector3.Distance(pos, Camera.Transform.Position));
+					float PositionSmooth = 0.2f;
+					//> 2 and < 16
+					if (PositionDistance > 2)
 					{
-						smooth = distance * 0.0625f;
+						if (PositionDistance <= 10)
+						{
+							PositionSmooth = PositionDistance * 0.1f;
+						}
+						else
+						{
+							PositionSmooth = 1;
+						}
 					}
 
-					Camera.Transform.Position = Vector3.Lerp(Camera.Transform.Position, pos, smooth);
-					Camera.Transform.Rotation = Quaternion.Lerp(Camera.Transform.Rotation, quat, 0.125f);
+					//float RotationDistance = Math.Abs(Vector3.Distance(pos, Camera.Transform.Position));
+					float RotationDistance = Math.Abs(Vector3.Distance(quat.Axis, Camera.Transform.Rotation.Axis));
+					float RotationSmooth = 0.1f;
+					//> 2 and < 16
+					if (RotationDistance > 1)
+					{
+						if (RotationDistance <= 10)
+						{
+							RotationSmooth = RotationDistance * 0.1f;
+						}
+						else
+						{
+							RotationSmooth = 1;
+						}
+					}
 
-					Ship.Transform.Position = pos;
-					Ship.Transform.Rotation = quat;
+					Camera.Transform.Position = Vector3.Lerp(Camera.Transform.Position, pos, PositionSmooth);
+					Camera.Transform.Rotation = Quaternion.Slerp(Camera.Transform.Rotation, quat, 0.125f);
 
-					DebugText.Print(pos.X.ToString(), new Int2(20, 20), Color4.White);
-                    DebugText.Print(pos.Y.ToString(), new Int2(20, 40), Color4.White);
-                    DebugText.Print(pos.Z.ToString(), new Int2(20, 60), Color4.White);
-                }
+					Ship.Transform.Position = Vector3.Lerp(Ship.Transform.Position, pos, 0.99f);
+					Ship.Transform.Rotation = Quaternion.Slerp(Ship.Transform.Rotation, quat, 0.99f);
+
+					//DebugText.Print(pos.X.ToString(), new Int2(20, 20), Color4.White);
+					//DebugText.Print(pos.Y.ToString(), new Int2(20, 40), Color4.White);
+					//DebugText.Print(pos.Z.ToString(), new Int2(20, 60), Color4.White);
+
+					DebugText.Print(Camera.Transform.Position.X.ToString(), new Int2(20, 20), Color4.White);
+					DebugText.Print(Camera.Transform.Position.Y.ToString(), new Int2(20, 40), Color4.White);
+					DebugText.Print(Camera.Transform.Position.Z.ToString(), new Int2(20, 60), Color4.White);
+
+					DebugText.Print(quat.Angle.ToString(), new Int2(20, 90), Color4.White);
+				}
             }
             
         }

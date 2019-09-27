@@ -1,0 +1,8 @@
+!Texture
+Id: 0e7f9dcc-ac3c-4586-b6a5-c9b22f095f16
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../../Desktop/2.jpg
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+    PremultiplyAlpha: false

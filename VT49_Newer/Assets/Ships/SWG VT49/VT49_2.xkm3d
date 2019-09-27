@@ -5,6 +5,7 @@ Tags: []
 Source: !file ../../../../../../VT49.fbx
 Skeleton: b54d7d58-55a7-4f17-a1f8-4e6ffe224302:Ships/SWG VT49/VT49 Skeleton
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+MergeMeshes: false
 Materials:
     c2aaa1061edd55c129db252e5748bcff:
         Name: 11

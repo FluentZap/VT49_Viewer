@@ -20,7 +20,6 @@ Hierarchy:
         - ref!! e8aff0cf-585b-4a49-a5df-a94e31454259
         - ref!! 21c56a66-1fe1-4b23-8be4-ab55cdc37a6a
         - ref!! 825adf70-a5ea-4fe9-a869-d21d0568c504
-        - ref!! ee45de47-b969-4abc-baa9-9f907dfaf519
         - ref!! 7c9a94f9-cc6a-4b76-807d-0614efd5836c
         - ref!! 37e283fe-0e90-4aa9-87b5-8b985859937e
         - ref!! cbfd7d6d-038b-4244-833f-6fc7e098d2f9
@@ -77,23 +76,6 @@ Hierarchy:
                         Id: 3b2fb1f3-8f1f-42d7-abd2-635abd8a0e6f
                         Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
                         Materials: {}
-        -   Entity:
-                Id: 05ed8179-dbfe-4f3e-9982-ac6868ee6205
-                Name: VT-49 FrontOutside
-                Components:
-                    dec48846d190b1e08ef2f8f78d5927d4: !TransformComponent
-                        Id: b6b9de74-fa44-41c1-a4b1-4d026e4c5bd0
-                        Position: {X: 0.0, Y: 1.0, Z: 5.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    7cf2d447bb790c6a776ba8a640bfef3e: !CameraComponent
-                        Id: 18f2a97a-47bf-4b74-b0b8-84657b7fca6c
-                        Enabled: false
-                        Name: FrontOutside
-                        Projection: Perspective
-                        VerticalFieldOfView: 60.0
-                        Slot: 3d803371-91dc-4734-b62a-f22f4eeac169
         -   Entity:
                 Id: 0689006d-d3cf-4155-af78-8c7a99d6c959
                 Name: Point light
@@ -175,8 +157,6 @@ Hierarchy:
                         ui: a7a9976e-be01-44ce-aaf8-526d84034bb6:Page
                         Ship: ref!! a0f5ba57-7bb4-495e-bd85-9b802711dfce
                         Camera: ref!! 2a9f50d6-a821-4b9e-92e0-0d92c26e84f4
-                        CameraInsideFront: ref!! b9a84f6c-1b32-4f14-b87c-895ed7a5f188
-                        CameraOutsideFront: ref!! 18f2a97a-47bf-4b74-b0b8-84657b7fca6c
         -   Folder: Fighters
             Entity:
                 Id: 24948cf5-6f87-48ae-84e2-4887e48d05db
@@ -480,22 +460,6 @@ Hierarchy:
                         Type: !LightSkybox
                             Skybox: 39265df4-d32a-418d-baa2-ba073d499ee1:BlueSky
                         Intensity: 0.1
-        -   Entity:
-                Id: 99dc6aaa-cb24-42e8-91e1-f861c5fb9f60
-                Name: VT-49 FrontInside
-                Components:
-                    dec48846d190b1e08ef2f8f78d5927d4: !TransformComponent
-                        Id: b464a934-e387-47f2-8897-7862c1887438
-                        Position: {X: -0.07041435, Y: 0.4663996, Z: -0.443379074}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    7cf2d447bb790c6a776ba8a640bfef3e: !CameraComponent
-                        Id: b9a84f6c-1b32-4f14-b87c-895ed7a5f188
-                        Enabled: false
-                        Name: FrontInside
-                        Projection: Perspective
-                        Slot: 3d803371-91dc-4734-b62a-f22f4eeac169
         -   Folder: Fighters2
             Entity:
                 Id: 9dbb0fcf-f2c1-4818-829a-a9e07fecb7a7
@@ -520,15 +484,11 @@ Hierarchy:
                         Position: {X: 0.0, Y: -1.90734863E-06, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            4c11beb2ead1957b6bf75c92fa3bf2fc: ref!! b6b9de74-fa44-41c1-a4b1-4d026e4c5bd0
-                            1aaac47eb99fb89f4874bb5c368b7417: ref!! b464a934-e387-47f2-8897-7862c1887438
-                            1271130a350672d9da139f761279b0c5: ref!! 0913f901-b47a-4ebb-be8b-db29f0adab3d
+                        Children: {}
                     f5b8ae62ff2bb605d3205c9921e6f73e: !ModelComponent
                         Id: 7efb04dc-d4f9-4c96-9bc1-907accd63bf5
                         Model: eae833f5-a115-4fa4-bef7-1b9b4e817a2c:Ships/SWG VT49/VT49_2
-                        Materials:
-                            9db6237676362395167d674560e45d8d~5: 9a4cb52e-5c64-4ba9-a99b-9d570fe6acd4:Ships/SWG VT49/01
+                        Materials: {}
         -   Folder: Fighters2
             Entity:
                 Id: a413618c-29b8-4c33-9057-3cf820f95806
@@ -589,21 +549,6 @@ Hierarchy:
                         Id: bcfe3fe1-c781-4cd5-bfbb-4f00e780c469
                         Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
                         Materials: {}
-        -   Entity:
-                Id: b3b99122-9c32-4ca6-9f10-00fc194bde13
-                Name: Box
-                Components:
-                    c7ff8f4399a589adee94dafbfa5ffd76: !TransformComponent
-                        Id: 0913f901-b47a-4ebb-be8b-db29f0adab3d
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    dbe50de8932f13b08293805631df7681: !ModelComponent
-                        Id: 84c002cf-ae83-48ed-92fe-38402a733aa8
-                        Enabled: false
-                        Model: d7a2ab71-4c00-42d6-b04a-6a72db105196:Ships/Box
-                        Materials: {}
         -   Folder: Fighters
             Entity:
                 Id: ba9b2c6e-87e1-4824-acf5-00e9f821188a
@@ -658,7 +603,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 1.0, Z: 5.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            e1747bbf17b5f7c03e0f3f0f06c9bb54: ref!! 36953d2f-ef8a-4634-a8c0-f421d12575e6
                     e443af0322e7ceb5878eb97111edc8ce: !CameraComponent
                         Id: 2aee1644-4f73-4a1b-aa59-cd7443b753dd
                         Name: Camera
@@ -682,6 +628,89 @@ Hierarchy:
                         Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
                         Materials: {}
         -   Entity:
+                Id: dd2b2f8f-f08f-4565-a12b-cda02d01297a
+                Name: Empty particle system
+                Components:
+                    3dadfaad6a2a84b17b6c724a364995d8: !TransformComponent
+                        Id: 36953d2f-ef8a-4634-a8c0-f421d12575e6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    213303d199e6041d72cfdebba1a93956: !ParticleSystemComponent
+                        Id: 15489cea-11a0-4e12-91d6-6b1b71644a8c
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 0.0
+                            Control: Play
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                1a2cfa076384ae7ae2ed4d7410f5dba5:
+                                    EmitterName: LargeStars
+                                    ParticleLifetime: {X: 1.0, Y: 2000.0}
+                                    SortingPolicy: ByDepth
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeColor
+                                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        3e6958d40408ed3e1a74f62f649cda0e: !SpawnerFromDistance
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 100.0
+                                    Initializers:
+                                        3b7a85aec38ef9412513cd687b312234: !InitialPositionSeed
+                                            DebugDraw: true
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.707106769, Y: 0.0, Z: 0.0, W: 0.707106769}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -10.0, Y: -10.0, Z: -10.0}
+                                            PositionMax: {X: 10.0, Y: 0.0, Z: 10.0}
+                                            Interpolate: false
+                                    Updaters:
+                                        a9de9e780e371e225d90c02c395910d0: !UpdaterForceField
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: true
+                                            FieldShape: null
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: true
+                                            DisplayParticleScaleUniform: false
+                                            FieldFalloff:
+                                                StrengthInside: 1.0
+                                                FalloffStart: 0.1
+                                                StrengthOutside: 0.0
+                                                FalloffEnd: 0.9
+                                            EnergyConservation: 0.0
+                                            ForceDirected: 0.0
+                                            ForceVortex: 1.0
+                                            ForceRepulsive: 1.0
+                                            ForceFixed: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
                 Id: e8aff0cf-585b-4a49-a5df-a94e31454259
                 Name: DebugPhysicsShapes
                 Components:
@@ -694,16 +723,6 @@ Hierarchy:
                     5159a9393dd67b1d84cc73dd0d5420f6: !VT49_Newer.DebugPhysicsShapes,VT49_Newer
                         Id: 1447db0e-182f-48b4-98a6-45fbcc8ee224
                         RenderGroup: Group7
-        -   Entity:
-                Id: ee45de47-b969-4abc-baa9-9f907dfaf519
-                Name: vfx-Teleport
-                Components:
-                    5fe0b2913d9692cc69dc9ea15175d4f6: !TransformComponent
-                        Id: 271f45d5-5884-4a6e-bcff-7679e0fa4006
-                        Position: {X: 3.03811216, Y: 0.0, Z: 3.20398831}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
         -   Folder: Fighters
             Entity:
                 Id: f0b9e088-0981-4355-abb5-1bcf23d49f8f

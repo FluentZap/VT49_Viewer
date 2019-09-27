@@ -1,0 +1,15 @@
+!Model
+Id: 94a4f51e-8fd3-4554-93c7-0910e83449a5
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../Asteroid_Type3.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    9bea44cbc41d85b878863beb24704461:
+        Name: Material.001
+        MaterialInstance:
+            Material: 8fb833cc-e659-4fa5-82f1-fb1221a89a18:SpaceObjects/Asteroid_Material
+Modifiers: {}
+~SourceHashes:
+    f3276b9b3c97abb5ffa97eae4e93d745~../../Asteroid_Type3.fbx: cb67e3664f490a64422de0d3fb85e488
