@@ -15,7 +15,6 @@ Hierarchy:
         - ref!! 1cc8a0c9-60d4-470c-9f6e-4f40e8e89f14
         - ref!! 5c11f0b5-8d4b-46ab-b40f-69d41b9aef0a
         - ref!! a0f5ba57-7bb4-495e-bd85-9b802711dfce
-        - ref!! 20a22618-c24e-4f58-aa57-832b0765b3cf
         - ref!! 2a9e5f3b-7265-4dd3-9fdd-707c50a0ba6d
         - ref!! e8aff0cf-585b-4a49-a5df-a94e31454259
         - ref!! 21c56a66-1fe1-4b23-8be4-ab55cdc37a6a
@@ -76,27 +75,6 @@ Hierarchy:
                         Id: 3b2fb1f3-8f1f-42d7-abd2-635abd8a0e6f
                         Model: 06b4d9a4-3733-4742-952e-c016f63a7171:Ships/LN-TIE/TieFighter
                         Materials: {}
-        -   Entity:
-                Id: 0689006d-d3cf-4155-af78-8c7a99d6c959
-                Name: Point light
-                Components:
-                    ab26abd9237a93e48f431e3ddbfc08fa: !TransformComponent
-                        Id: 07d09764-5b21-45c1-8bf2-4c1e093da33d
-                        Position: {X: 1.37197276E-09, Y: 35.2769051, Z: -0.0156955719}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    eb97484da3fd53b9c3ba8e9194aa0c8e: !LightComponent
-                        Id: 4b6073ab-6ffc-4d6a-b0de-37a3a592cb37
-                        Enabled: false
-                        Type: !LightPoint
-                            Color: !ColorRgbProvider
-                                Value: {R: 1.0, G: 1.0, B: 1.0}
-                            Radius: 80.0
-                            Shadow:
-                                Size: Small
-                                BiasParameters: {}
-                        Intensity: 300.0
         -   Folder: null
             Entity:
                 Id: 1cc8a0c9-60d4-470c-9f6e-4f40e8e89f14
@@ -127,21 +105,6 @@ Hierarchy:
                         Page: a7a9976e-be01-44ce-aaf8-526d84034bb6:Page
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.0, Y: 1.0, Z: 1.0}
-        -   Entity:
-                Id: 20a22618-c24e-4f58-aa57-832b0765b3cf
-                Name: XQ6 Platform
-                Components:
-                    9f2395fad3f1d66064ef7c3476a89b5a: !TransformComponent
-                        Id: 388e7d54-7e8b-4b68-b240-6c174d61654f
-                        Position: {X: 0.0, Y: 0.0, Z: 100.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            77232f0ee13948433f06d1e714edc706: ref!! 07d09764-5b21-45c1-8bf2-4c1e093da33d
-                    ce2d397285de289c4a9d650449396a49: !ModelComponent
-                        Id: 4da2d944-3878-4965-902a-b5f1b6086e78
-                        Model: 8b8b4bc0-7261-4d63-9cb5-b12964a56402:Ships/XQ6/XQ6 Platform
-                        Materials: {}
         -   Entity:
                 Id: 21c56a66-1fe1-4b23-8be4-ab55cdc37a6a
                 Name: NetworkUpdate

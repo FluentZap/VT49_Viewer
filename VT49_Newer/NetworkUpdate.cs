@@ -14,7 +14,14 @@ using Xenko.UI.Controls;
 
 namespace VT49_Newer
 {
-
+	public enum ListOf_Entity
+	{
+		VT49,
+		XQ6,
+		Asteroid_Type1,
+		Asteroid_Type2,
+		Asteroid_Type3,
+	}
 
 	class PacketDecoder
 	{
@@ -71,10 +78,10 @@ namespace VT49_Newer
 
 	class SpaceObject
 	{		
-		public int ObjectType;	
+		public ListOf_Entity ObjectType;	
 		public Entity entityRef;
 
-		public SpaceObject(ref Entity entity, int type)
+		public SpaceObject(ref Entity entity, ListOf_Entity type)
 		{
 			entityRef = entity;
 			ObjectType = type;
@@ -103,6 +110,7 @@ namespace VT49_Newer
 
 
 		Dictionary<int, SpaceObject> SpaceObjects = new Dictionary<int, SpaceObject>();
+		Dictionary<ListOf_Entity, Model> Models = new Dictionary<ListOf_Entity, Model>();
 
 		// Declared public member fields and properties will show in the game studio        
 		private TcpClient client = new TcpClient();
@@ -170,6 +178,16 @@ namespace VT49_Newer
 		}
 
 
+
+		public void LoadModels()
+		{
+			Models.Add(ListOf_Entity.XQ6, Content.Load<Model>("Ships/XQ6/XQ6 Platform"));
+			Models.Add(ListOf_Entity.Asteroid_Type1, Content.Load<Model>("SpaceObjects/Asteroid_Type1"));
+			Models.Add(ListOf_Entity.Asteroid_Type2, Content.Load<Model>("SpaceObjects/Asteroid_Type2"));
+			Models.Add(ListOf_Entity.Asteroid_Type3, Content.Load<Model>("SpaceObjects/Asteroid_Type3"));
+		}
+
+
 		public override void Start()
 		{
 			/*
@@ -214,6 +232,7 @@ namespace VT49_Newer
 
 			//// Add a new entity to the scene
 			//SceneSystem.SceneInstance.RootScene.Entities.Add(entity);
+			LoadModels();
 
 			SetModelDisplay();
 
@@ -330,7 +349,7 @@ namespace VT49_Newer
 			for (ushort i = 0; i < count; i++)
 			{				
 				int id = decoder.Read_UInt16();
-				int type = decoder.Read_UInt16();
+				ListOf_Entity type = (ListOf_Entity)decoder.Read_UInt16();
 				Vector3 location = decoder.Read_Vector3();
 				Vector3 scale = decoder.Read_Vector3();
 				Quaternion rotation = decoder.Read_Quat();
@@ -342,28 +361,9 @@ namespace VT49_Newer
 		
 
 
-		Entity AddObject(int objectType, int Id, Vector3 locaiton, Vector3 scale, Quaternion rotation)
+		Entity AddObject(ListOf_Entity objectType, int Id, Vector3 locaiton, Vector3 scale, Quaternion rotation)
 		{
-			Model model;
-			switch (objectType)
-			{
-				case 2:
-					model = Content.Load<Model>("SpaceObjects/Asteroid_Type1");
-					break;
-				case 3:
-					model = Content.Load<Model>("SpaceObjects/Asteroid_Type2");
-					break;
-				case 4:
-					model = Content.Load<Model>("SpaceObjects/Asteroid_Type3");
-					break;
-
-				default:
-					model = Content.Load<Model>("SpaceObjects/Asteroid_Type1");
-					break;
-			}
-
-			
-
+			Model model = Models[objectType];
 			// Create a new entity to add to the scene
 			Entity entity = new Entity( locaiton, $"Object_{Id}") { new ModelComponent { Model = model } };
 			entity.Transform.Rotation = rotation;
@@ -463,16 +463,9 @@ namespace VT49_Newer
 			Ship.Transform.Position = Vector3.Lerp(Ship.Transform.Position, pos, 0.99f);
 			Ship.Transform.Rotation = Quaternion.Slerp(Ship.Transform.Rotation, quat, 0.99f);
 
-			//DebugText.Print(pos.X.ToString(), new Int2(20, 20), Color4.White);
-			//DebugText.Print(pos.Y.ToString(), new Int2(20, 40), Color4.White);
-			//DebugText.Print(pos.Z.ToString(), new Int2(20, 60), Color4.White);
-
-			if (SceneSystem.SceneInstance.RootScene.Entities[40] != null)
-			{
-				DebugText.Print(SceneSystem.SceneInstance.RootScene.Entities[40].Transform.Position.X.ToString(), new Int2(20, 20), Color4.White);
-			}			
-
-
+			DebugText.Print(pos.X.ToString(), new Int2(20, 20), Color4.White);
+			DebugText.Print(pos.Y.ToString(), new Int2(20, 40), Color4.White);
+			DebugText.Print(pos.Z.ToString(), new Int2(20, 60), Color4.White);
 
 			//DebugText.Print(Camera.Transform.Position.X.ToString(), new Int2(20, 20), Color4.White);
 			//DebugText.Print(Camera.Transform.Position.Y.ToString(), new Int2(20, 40), Color4.White);
