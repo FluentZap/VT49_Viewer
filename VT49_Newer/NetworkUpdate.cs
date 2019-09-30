@@ -70,12 +70,16 @@ namespace VT49_Newer
 	}
 
 	class SpaceObject
-	{
-		public Vector3 Location;
-		public UInt16 ObjectType;
-		public Vector3 Scale;
-		public Quaternion Rotation;
-		public int Id;
+	{		
+		public int ObjectType;	
+		public Entity entityRef;
+
+		public SpaceObject(ref Entity entity, int type)
+		{
+			entityRef = entity;
+			ObjectType = type;
+		}
+
 	}
 
 	public class NetworkUpdate : SyncScript
@@ -84,6 +88,21 @@ namespace VT49_Newer
 		const int Int16_S = sizeof(Int16);
 		const int Int32_S = sizeof(Int32);
 
+		int MeshFirstPacketSize =
+			sizeof(UInt16) +   //ObjectId
+			sizeof(UInt16) +   //ObjectType
+			sizeof(float) * 10; //Position Data
+
+		int MeshUpdatePacketSize =
+			sizeof(UInt16) +   //ObjectId        
+			sizeof(float) * 7; //Position Data
+
+		int ShipPacketSize =
+			sizeof(UInt16) +   //ObjectId
+			sizeof(float) * 7; //Position Data
+
+
+		Dictionary<int, SpaceObject> SpaceObjects = new Dictionary<int, SpaceObject>();
 
 		// Declared public member fields and properties will show in the game studio        
 		private TcpClient client = new TcpClient();
@@ -295,45 +314,35 @@ namespace VT49_Newer
 		void LoadInitialSystem()
 		{
 			UInt16 count = ReadInt16();
-			int packetSize = count * (sizeof(UInt16) + sizeof(UInt16) + sizeof(float) * 10);
+			int packetSize = count * MeshFirstPacketSize;
 			byte[] b = new byte[packetSize];
 
 			stream.Read(b, 0, b.Length);
 
 			PacketDecoder decoder = new PacketDecoder(ref b);
-			//sceneSystem.SceneInstance.RootScene.Entities.Where(x => x)
-			List<SpaceObject> spaceObjects = new List<SpaceObject>();
-			for (ushort i = 0; i < count; i++)
+			//List<SpaceObject> spaceObjects = new List<SpaceObject>();
+			foreach (var item in SpaceObjects)
 			{
-				spaceObjects.Add(new SpaceObject()
-				{
-					Id = decoder.Read_UInt16(),
-					ObjectType = decoder.Read_UInt16(),
-					Location = decoder.Read_Vector3(),
-					Scale = decoder.Read_Vector3(),
-					Rotation = decoder.Read_Quat()
-				});
+				SceneSystem.SceneInstance.RootScene.Entities.Remove(item.Value.entityRef);
 			}
+			SpaceObjects.Clear();
 
-			List<Entity> RemoveList = new List<Entity>();
-			for (int i = 0; i < SceneSystem.SceneInstance.RootScene.Entities.Count; i++)
-			{
-				if (SceneSystem.SceneInstance.RootScene.Entities[i].Name.Contains("Asteroid_"))
-				{
-					SceneSystem.SceneInstance.RootScene.Entities.Remove(SceneSystem.SceneInstance.RootScene.Entities[i]);
-				}
-			}			
+			for (ushort i = 0; i < count; i++)
+			{				
+				int id = decoder.Read_UInt16();
+				int type = decoder.Read_UInt16();
+				Vector3 location = decoder.Read_Vector3();
+				Vector3 scale = decoder.Read_Vector3();
+				Quaternion rotation = decoder.Read_Quat();
 
-			foreach (var item in spaceObjects)
-			{
-				AddObject(item.ObjectType, item.Id, item.Location, item.Scale, item.Rotation);
-				Console.WriteLine(item.Id);
+				Entity entitieRef = AddObject(type, id, location, scale, rotation);				
+				SpaceObjects.Add(id, new SpaceObject(ref entitieRef, type));
 			}
 		}
 		
 
 
-		void AddObject(int objectType, int Id, Vector3 locaiton, Vector3 scale, Quaternion rotation)
+		Entity AddObject(int objectType, int Id, Vector3 locaiton, Vector3 scale, Quaternion rotation)
 		{
 			Model model;
 			switch (objectType)
@@ -356,28 +365,42 @@ namespace VT49_Newer
 			
 
 			// Create a new entity to add to the scene
-			Entity entity = new Entity( locaiton, $"Asteroid_{Id}") { new ModelComponent { Model = model } };
+			Entity entity = new Entity( locaiton, $"Object_{Id}") { new ModelComponent { Model = model } };
 			entity.Transform.Rotation = rotation;
 			entity.Transform.Scale = scale;
 
 			// Add a new entity to the scene
 			SceneSystem.SceneInstance.RootScene.Entities.Add(entity);
+
+			return entity;
 		}		
 
 
 
 		private void UpdateShips()
 		{
-			int size =
-				sizeof(UInt16) +    //ObjectId
-				sizeof(float) * 7;  //Position Data
-
+			UInt16 count = ReadInt16();
+			int size = ShipPacketSize + (count * MeshUpdatePacketSize);						
 			byte[] b = new byte[size];
 			stream.Read(b, 0, size);
 			PacketDecoder decoder = new PacketDecoder(ref b);
-
+			//Ship
+			int shipId = decoder.Read_UInt16();
 			Vector3 pos = decoder.Read_Vector3();
 			Quaternion quat = decoder.Read_Quat();
+			
+			for (int i = 0; i < count; i++)
+			{
+				int id = decoder.Read_UInt16();
+				if (SpaceObjects.ContainsKey(id))
+				{
+					SpaceObject spaceObject = SpaceObjects[id];
+					spaceObject.entityRef.Transform.Position = decoder.Read_Vector3();
+					spaceObject.entityRef.Transform.Rotation = decoder.Read_Quat();
+				}
+			}
+
+			
 
 
 			//Matrix mat = Matrix.Identity * Matrix.Translation(Ship.Transform.Position) * Matrix.RotationQuaternion(Ship.Transform.Rotation);
