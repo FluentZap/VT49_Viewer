@@ -14,22 +14,91 @@ using Xenko.UI.Controls;
 
 namespace VT49_Newer
 {
-    public class NetworkUpdate : SyncScript
-    {
-        // Declared public member fields and properties will show in the game studio        
-        private TcpClient client = new TcpClient();
-        private NetworkStream stream;
-        public Entity Ship { get; set; } = null;
+
+
+	class PacketDecoder
+	{
+		byte[] Buffer;
+		int index;
+		static int Float_S = sizeof(float);
+		static int UInt16_S = sizeof(UInt16);
+
+		public PacketDecoder(ref byte[] buffer)
+		{
+			Buffer = buffer;
+		}
+
+		public float Read_Float()
+		{
+			float value = BitConverter.ToSingle(Buffer, index);
+			index += Float_S;
+			return value;
+		}
+		public UInt16 Read_UInt16()
+		{
+			UInt16 value = BitConverter.ToUInt16(Buffer, index);
+			index += UInt16_S;
+			return value;
+		}
+		public byte Read_Byte()
+		{
+			byte value = Buffer[index];
+			index++;
+			return value;
+		}
+
+		public Vector3 Read_Vector3()
+		{
+			return new Vector3
+				(
+					Read_Float(),
+					Read_Float(),
+					Read_Float()
+				);
+		}
+
+		public Quaternion Read_Quat()
+		{
+			return new Quaternion
+				(
+					Read_Float(),
+					Read_Float(),
+					Read_Float(),
+					Read_Float()
+				);
+		}
+	}
+
+	class SpaceObject
+	{
+		public Vector3 Location;
+		public UInt16 ObjectType;
+		public Vector3 Scale;
+		public Quaternion Rotation;
+		public int Id;
+	}
+
+	public class NetworkUpdate : SyncScript
+	{
+		const int Float_S = sizeof(float);
+		const int Int16_S = sizeof(Int16);
+		const int Int32_S = sizeof(Int32);
+
+
+		// Declared public member fields and properties will show in the game studio        
+		private TcpClient client = new TcpClient();
+		private NetworkStream stream;
+		public Entity Ship { get; set; } = null;
 
 		public Entity Camera { get; set; } = null;
 
 		//private string ClientIP = "127.0.0.1";
 		public UIPage ui;
-        private EditText TextBox;
-        private Button ConnectButton;
+		private EditText TextBox;
+		private Button ConnectButton;
 
-        private Button CameraButton_InsideFront;
-        private Button CameraButton_OutsideFront;
+		private Button CameraButton_InsideFront;
+		private Button CameraButton_OutsideFront;
 
 
 
@@ -82,8 +151,8 @@ namespace VT49_Newer
 		}
 
 
-        public override void Start()
-        {
+		public override void Start()
+		{
 			/*
             IPAddress localAdd = IPAddress.Parse("127.0.0.1");
             TcpListener listener = new TcpListener(localAdd, 4949);
@@ -117,176 +186,277 @@ namespace VT49_Newer
 
 
 
-			// Load a model (replace URL with valid URL)
-			var model = Content.Load<Model>("SpaceObjects/Asteroid_Type1");
-			
-			// Create a new entity to add to the scene
-			Entity entity = new Entity(new Vector3(15, 0, 15), "Asteroid_1") { new ModelComponent { Model = model } };
-			entity.Transform.Scale = new Vector3(10, 10, 10);
+			//// Load a model (replace URL with valid URL)
+			//var model = Content.Load<Model>("SpaceObjects/Asteroid_Type1");
 
-			// Add a new entity to the scene
-			SceneSystem.SceneInstance.RootScene.Entities.Add(entity);
+			//// Create a new entity to add to the scene
+			//Entity entity = new Entity(new Vector3(15, 0, 15), "Asteroid_1") { new ModelComponent { Model = model } };
+			//entity.Transform.Scale = new Vector3(10, 10, 10);
+
+			//// Add a new entity to the scene
+			//SceneSystem.SceneInstance.RootScene.Entities.Add(entity);
 
 			SetModelDisplay();
 
 			TextBox = ui.RootElement.FindVisualChildOfType<EditText>("IPBox");
-            ConnectButton = ui.RootElement.FindVisualChildOfType<Button>("ConnectButton");
-            CameraButton_InsideFront = ui.RootElement.FindVisualChildOfType<Button>("CameraInsideFront");
-            CameraButton_OutsideFront = ui.RootElement.FindVisualChildOfType<Button>("CameraOutsideFront");
-            
-
-            ConnectButton.Click += delegate
-			{				
-                if (!client.Connected)
-                {
-                    try
-                    {
-                        client = new TcpClient(TextBox.Text, 4949);
-                        stream = client.GetStream();
-                    }
-                    catch (ArgumentException e)
-                    {
-                        DebugText.Print("Could not connect" + e.Message, new Int2(0, 0));
-                    }
-                }
-            };
-
-            //CameraButton_InsideFront.Click += delegate
-            //{
-            //    disableCameras();
-            //    CameraInsideFront.Enabled = true;                
-            //};
-
-            //CameraButton_OutsideFront.Click += delegate
-            //{
-            //    disableCameras();
-            //    CameraOutsideFront.Enabled = true;                
-            //};
+			ConnectButton = ui.RootElement.FindVisualChildOfType<Button>("ConnectButton");
+			CameraButton_InsideFront = ui.RootElement.FindVisualChildOfType<Button>("CameraInsideFront");
+			CameraButton_OutsideFront = ui.RootElement.FindVisualChildOfType<Button>("CameraOutsideFront");
 
 
-            //void disableCameras()
-            //{
-            //    CameraInsideFront.Enabled = false;
-            //    CameraOutsideFront.Enabled = false;
-            //}
-
-
-
-
-        }
-
-        public override void Update()
-        {
-            if (Input.IsKeyPressed(Keys.Escape))
-                client.Close();
-
-
-            if (Input.IsKeyPressed(Keys.F2))
-            {
-                TextBox.Visibility = Visibility.Hidden;
-                ConnectButton.Visibility = Visibility.Hidden;
-            }            
-
-            if (Input.IsKeyPressed(Keys.F1))
-            {
-                TextBox.Visibility = Visibility.Visible;
-                ConnectButton.Visibility = Visibility.Visible;
-            }
-
-                
-
-
-            // Do stuff every new frame
-            if (client.Connected)
-            {
-                while (client.Available > 0)
-                {
-					byte[] b = new byte[sizeof(float) * 7];
-                    stream.Read(b, 0, sizeof(float) * 7);
-                    Vector3 pos = new Vector3();
-					Quaternion quat = new Quaternion();
-					pos.X = BitConverter.ToSingle(b, sizeof(float) * 0);
-                    pos.Y = BitConverter.ToSingle(b, sizeof(float) * 1);
-                    pos.Z = BitConverter.ToSingle(b, sizeof(float) * 2);
-
-					quat.X = BitConverter.ToSingle(b, sizeof(float) * 3);
-					quat.Y = BitConverter.ToSingle(b, sizeof(float) * 4);
-					quat.Z = BitConverter.ToSingle(b, sizeof(float) * 5);
-					quat.W = BitConverter.ToSingle(b, sizeof(float) * 6);
-
-					//Matrix mat = Matrix.Identity * Matrix.Translation(Ship.Transform.Position) * Matrix.RotationQuaternion(Ship.Transform.Rotation);
-					//Matrix mat = Matrix.Translation(Ship.Transform.Position) * Matrix.RotationQuaternion(Ship.Transform.Rotation);
-
-					//mat.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation);					
-					//Camera.Transform.Position = translation;
-					//Camera.Transform.Rotation = rotation;
-
-					//Camera.Transform.Rotation = Ship.Transform.Rotation;
-					//Camera.Transform.Position = Ship.Transform.Position;
-					//Matrix cameraTransform = Matrix.RotationQuaternion(Ship.Transform.Rotation) + Matrix.Translation(Ship.Transform.Position + new Vector3(0, 1, -5));
-					//Camera.Transform.Position = translation;
-					//Camera.Transform.Rotation = rotation;
-
-					//Camera.Transform.Position = Vector3.Clamp(
-					//	Vector3.Lerp(Camera.Transform.Position, Ship.Transform.Position, 0.125f),
-					//	Ship.Transform.Position * 0.01f,
-					//	Ship.Transform.Position * 10f
-					//	);
-
-					//float glow = Math.Abs(Vector3.Distance(Ship.Transform.Position, pos));					
-
-					//Ship.Components.Get<ModelComponent>().GetMaterial(0).Passes[0].Parameters.Set()
-
-					float PositionDistance = Math.Abs(Vector3.Distance(pos, Camera.Transform.Position));
-					float PositionSmooth = 0.2f;
-					//> 2 and < 16
-					if (PositionDistance > 2)
+			ConnectButton.Click += delegate
+			{
+				if (!client.Connected)
+				{
+					try
 					{
-						if (PositionDistance <= 10)
-						{
-							PositionSmooth = PositionDistance * 0.1f;
-						}
-						else
-						{
-							PositionSmooth = 1;
-						}
+						client = new TcpClient(TextBox.Text, 4949);
+						stream = client.GetStream();
 					}
-
-					//float RotationDistance = Math.Abs(Vector3.Distance(pos, Camera.Transform.Position));
-					float RotationDistance = Math.Abs(Vector3.Distance(quat.Axis, Camera.Transform.Rotation.Axis));
-					float RotationSmooth = 0.1f;
-					//> 2 and < 16
-					if (RotationDistance > 1)
+					catch (ArgumentException e)
 					{
-						if (RotationDistance <= 10)
-						{
-							RotationSmooth = RotationDistance * 0.1f;
-						}
-						else
-						{
-							RotationSmooth = 1;
-						}
+						DebugText.Print("Could not connect" + e.Message, new Int2(0, 0));
 					}
-
-					Camera.Transform.Position = Vector3.Lerp(Camera.Transform.Position, pos, PositionSmooth);
-					Camera.Transform.Rotation = Quaternion.Slerp(Camera.Transform.Rotation, quat, 0.125f);
-
-					Ship.Transform.Position = Vector3.Lerp(Ship.Transform.Position, pos, 0.99f);
-					Ship.Transform.Rotation = Quaternion.Slerp(Ship.Transform.Rotation, quat, 0.99f);
-
-					//DebugText.Print(pos.X.ToString(), new Int2(20, 20), Color4.White);
-					//DebugText.Print(pos.Y.ToString(), new Int2(20, 40), Color4.White);
-					//DebugText.Print(pos.Z.ToString(), new Int2(20, 60), Color4.White);
-
-					DebugText.Print(Camera.Transform.Position.X.ToString(), new Int2(20, 20), Color4.White);
-					DebugText.Print(Camera.Transform.Position.Y.ToString(), new Int2(20, 40), Color4.White);
-					DebugText.Print(Camera.Transform.Position.Z.ToString(), new Int2(20, 60), Color4.White);
-
-					DebugText.Print(quat.Angle.ToString(), new Int2(20, 90), Color4.White);
 				}
-            }
-            
-        }
-       
-    }
+			};
+
+			//CameraButton_InsideFront.Click += delegate
+			//{
+			//    disableCameras();
+			//    CameraInsideFront.Enabled = true;                
+			//};
+
+			//CameraButton_OutsideFront.Click += delegate
+			//{
+			//    disableCameras();
+			//    CameraOutsideFront.Enabled = true;                
+			//};
+
+
+			//void disableCameras()
+			//{
+			//    CameraInsideFront.Enabled = false;
+			//    CameraOutsideFront.Enabled = false;
+			//}
+
+
+
+
+		}
+
+		public override void Update()
+		{			
+			if (Input.IsKeyPressed(Keys.Escape))
+			{
+				client.Close();
+			}
+
+			if (Input.IsKeyPressed(Keys.F2))
+			{
+				TextBox.Visibility = Visibility.Hidden;
+				ConnectButton.Visibility = Visibility.Hidden;
+			}
+
+			if (Input.IsKeyPressed(Keys.F1))
+			{
+				TextBox.Visibility = Visibility.Visible;
+				ConnectButton.Visibility = Visibility.Visible;
+			}
+
+			// Do stuff every new frame
+			if (client.Connected)
+			{
+				while (client.Available > 0)
+				{
+					int Header = stream.ReadByte();
+
+					switch (Header)
+					{
+						case 0:
+							LoadInitialSystem();							
+							break;
+						case 1:
+							UpdateShips();
+							break;
+					}
+				}
+			}
+
+		}
+
+		UInt16 ReadInt16()
+		{
+			byte[] b = new byte[Int16_S];
+			stream.Read(b, 0, Int16_S);
+			return BitConverter.ToUInt16(b, 0);
+		}
+
+
+		void LoadInitialSystem()
+		{
+			UInt16 count = ReadInt16();
+			int packetSize = count * (sizeof(UInt16) + sizeof(UInt16) + sizeof(float) * 10);
+			byte[] b = new byte[packetSize];
+
+			stream.Read(b, 0, b.Length);
+
+			PacketDecoder decoder = new PacketDecoder(ref b);
+			//sceneSystem.SceneInstance.RootScene.Entities.Where(x => x)
+			List<SpaceObject> spaceObjects = new List<SpaceObject>();
+			for (ushort i = 0; i < count; i++)
+			{
+				spaceObjects.Add(new SpaceObject()
+				{
+					Id = decoder.Read_UInt16(),
+					ObjectType = decoder.Read_UInt16(),
+					Location = decoder.Read_Vector3(),
+					Scale = decoder.Read_Vector3(),
+					Rotation = decoder.Read_Quat()
+				});
+			}
+
+			List<Entity> RemoveList = new List<Entity>();
+			for (int i = 0; i < SceneSystem.SceneInstance.RootScene.Entities.Count; i++)
+			{
+				if (SceneSystem.SceneInstance.RootScene.Entities[i].Name.Contains("Asteroid_"))
+				{
+					SceneSystem.SceneInstance.RootScene.Entities.Remove(SceneSystem.SceneInstance.RootScene.Entities[i]);
+				}
+			}			
+
+			foreach (var item in spaceObjects)
+			{
+				AddObject(item.ObjectType, item.Id, item.Location, item.Scale, item.Rotation);
+				Console.WriteLine(item.Id);
+			}
+		}
+		
+
+
+		void AddObject(int objectType, int Id, Vector3 locaiton, Vector3 scale, Quaternion rotation)
+		{
+			Model model;
+			switch (objectType)
+			{
+				case 2:
+					model = Content.Load<Model>("SpaceObjects/Asteroid_Type1");
+					break;
+				case 3:
+					model = Content.Load<Model>("SpaceObjects/Asteroid_Type2");
+					break;
+				case 4:
+					model = Content.Load<Model>("SpaceObjects/Asteroid_Type3");
+					break;
+
+				default:
+					model = Content.Load<Model>("SpaceObjects/Asteroid_Type1");
+					break;
+			}
+
+			
+
+			// Create a new entity to add to the scene
+			Entity entity = new Entity( locaiton, $"Asteroid_{Id}") { new ModelComponent { Model = model } };
+			entity.Transform.Rotation = rotation;
+			entity.Transform.Scale = scale;
+
+			// Add a new entity to the scene
+			SceneSystem.SceneInstance.RootScene.Entities.Add(entity);
+		}		
+
+
+
+		private void UpdateShips()
+		{
+			int size =
+				sizeof(UInt16) +    //ObjectId
+				sizeof(float) * 7;  //Position Data
+
+			byte[] b = new byte[size];
+			stream.Read(b, 0, size);
+			PacketDecoder decoder = new PacketDecoder(ref b);
+
+			Vector3 pos = decoder.Read_Vector3();
+			Quaternion quat = decoder.Read_Quat();
+
+
+			//Matrix mat = Matrix.Identity * Matrix.Translation(Ship.Transform.Position) * Matrix.RotationQuaternion(Ship.Transform.Rotation);
+			//Matrix mat = Matrix.Translation(Ship.Transform.Position) * Matrix.RotationQuaternion(Ship.Transform.Rotation);
+
+			//mat.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation);					
+			//Camera.Transform.Position = translation;
+			//Camera.Transform.Rotation = rotation;
+
+			//Camera.Transform.Rotation = Ship.Transform.Rotation;
+			//Camera.Transform.Position = Ship.Transform.Position;
+			//Matrix cameraTransform = Matrix.RotationQuaternion(Ship.Transform.Rotation) + Matrix.Translation(Ship.Transform.Position + new Vector3(0, 1, -5));
+			//Camera.Transform.Position = translation;
+			//Camera.Transform.Rotation = rotation;
+
+			//Camera.Transform.Position = Vector3.Clamp(
+			//	Vector3.Lerp(Camera.Transform.Position, Ship.Transform.Position, 0.125f),
+			//	Ship.Transform.Position * 0.01f,
+			//	Ship.Transform.Position * 10f
+			//	);
+
+			//float glow = Math.Abs(Vector3.Distance(Ship.Transform.Position, pos));					
+
+			//Ship.Components.Get<ModelComponent>().GetMaterial(0).Passes[0].Parameters.Set()
+
+			float PositionDistance = Math.Abs(Vector3.Distance(pos, Camera.Transform.Position));
+			float PositionSmooth = 0.2f;
+			//> 2 and < 16
+			if (PositionDistance > 2)
+			{
+				if (PositionDistance <= 10)
+				{
+					PositionSmooth = PositionDistance * 0.1f;
+				}
+				else
+				{
+					PositionSmooth = 1;
+				}
+			}
+
+			//float RotationDistance = Math.Abs(Vector3.Distance(pos, Camera.Transform.Position));
+			float RotationDistance = Math.Abs(Vector3.Distance(quat.Axis, Camera.Transform.Rotation.Axis));
+			float RotationSmooth = 0.1f;
+			//> 2 and < 16
+			if (RotationDistance > 1)
+			{
+				if (RotationDistance <= 10)
+				{
+					RotationSmooth = RotationDistance * 0.1f;
+				}
+				else
+				{
+					RotationSmooth = 1;
+				}
+			}
+
+			Camera.Transform.Position = Vector3.Lerp(Camera.Transform.Position, pos, PositionSmooth);
+			Camera.Transform.Rotation = Quaternion.Slerp(Camera.Transform.Rotation, quat, 0.125f);
+
+			Ship.Transform.Position = Vector3.Lerp(Ship.Transform.Position, pos, 0.99f);
+			Ship.Transform.Rotation = Quaternion.Slerp(Ship.Transform.Rotation, quat, 0.99f);
+
+			//DebugText.Print(pos.X.ToString(), new Int2(20, 20), Color4.White);
+			//DebugText.Print(pos.Y.ToString(), new Int2(20, 40), Color4.White);
+			//DebugText.Print(pos.Z.ToString(), new Int2(20, 60), Color4.White);
+
+			if (SceneSystem.SceneInstance.RootScene.Entities[40] != null)
+			{
+				DebugText.Print(SceneSystem.SceneInstance.RootScene.Entities[40].Transform.Position.X.ToString(), new Int2(20, 20), Color4.White);
+			}			
+
+
+
+			//DebugText.Print(Camera.Transform.Position.X.ToString(), new Int2(20, 20), Color4.White);
+			//DebugText.Print(Camera.Transform.Position.Y.ToString(), new Int2(20, 40), Color4.White);
+			//DebugText.Print(Camera.Transform.Position.Z.ToString(), new Int2(20, 60), Color4.White);
+
+			//DebugText.Print(quat.Angle.ToString(), new Int2(20, 90), Color4.White);
+		}
+
+	}
 }

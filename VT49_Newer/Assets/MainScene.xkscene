@@ -477,7 +477,7 @@ Hierarchy:
                         Materials: {}
         -   Entity:
                 Id: a0f5ba57-7bb4-495e-bd85-9b802711dfce
-                Name: VT49_2
+                Name: VT49
                 Components:
                     8c1d8da1b41a0cd490b6fe32f4397ff0: !TransformComponent
                         Id: d08bb58b-bdc1-40e4-ad1f-6bdfb16e4133
