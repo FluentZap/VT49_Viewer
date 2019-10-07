@@ -44,6 +44,7 @@ Hierarchy:
         - ref!! 02aeee66-3a5e-4564-a11e-cc0d6a4eeced
         - ref!! 477c5293-654b-48ac-a603-263a61b875d2
         - ref!! 2d4d1bd4-9cbb-46f7-add8-fb84bb596e34
+        - ref!! e7d98f4b-67a1-4d1e-81c2-afcb8f4a3d31
     Parts:
         -   Folder: Fighters2
             Entity:
@@ -673,6 +674,24 @@ Hierarchy:
                                             ForceVortex: 1.0
                                             ForceRepulsive: 1.0
                                             ForceFixed: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: e7d98f4b-67a1-4d1e-81c2-afcb8f4a3d31
+                Name: GameProfiler
+                Components:
+                    3bf77aab12cd9b4061d518329bf9e22e: !TransformComponent
+                        Id: 01b22467-51bb-4c34-b84a-45b707456f98
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    70c857659a32b6a0042d1b890471ee82: !VT49_Newer.GameProfiler,VT49_Newer
+                        Id: f74f6294-2254-47cd-986d-a0a4d373abf0
+                        Enabled: false
+                        TextColor: {R: 144, G: 238, B: 144, A: 255}
+                        RefreshTime: 500.0
+                        SortingMode: ByTime
+                        FilteringMode: Fps
+                        ResultPage: 1
         -   Entity:
                 Id: e8aff0cf-585b-4a49-a5df-a94e31454259
                 Name: DebugPhysicsShapes

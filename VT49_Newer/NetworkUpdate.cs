@@ -113,7 +113,7 @@ namespace VT49_Newer
 		Dictionary<ListOf_Entity, Model> Models = new Dictionary<ListOf_Entity, Model>();
 
 		// Declared public member fields and properties will show in the game studio        
-		private TcpClient client = new TcpClient();
+		private TcpClient client;
 		private NetworkStream stream;
 		public Entity Ship { get; set; } = null;
 
@@ -244,19 +244,30 @@ namespace VT49_Newer
 
 			ConnectButton.Click += delegate
 			{
-				if (!client.Connected)
+				if (client != null && client.Connected)
+				{
+					client.Close();
+					client = null;
+				}
+
+				if (client == null || !client.Connected)
 				{
 					try
-					{
+					{						
 						client = new TcpClient(TextBox.Text, 4949);
 						stream = client.GetStream();
 					}
 					catch (ArgumentException e)
-					{
+					{						
 						DebugText.Print("Could not connect" + e.Message, new Int2(0, 0));
+					}
+					catch (SocketException e)
+					{
+						Console.WriteLine("SocketException: {0}", e);						
 					}
 				}
 			};
+			
 
 			//CameraButton_InsideFront.Click += delegate
 			//{
@@ -302,10 +313,10 @@ namespace VT49_Newer
 			}
 
 			// Do stuff every new frame
-			if (client.Connected)
+			if (client != null && client.Connected)
 			{
 				while (client.Available > 0)
-				{
+				{					
 					int Header = stream.ReadByte();
 
 					switch (Header)
